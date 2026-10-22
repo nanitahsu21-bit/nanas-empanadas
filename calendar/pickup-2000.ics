@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nanas Empanadas//Preorder//ZH
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:pickup-2000-20261206@nanas-empanadas.vercel.app
+DTSTAMP:20261022T000000Z
+DTSTART:20261206T120000Z
+DTEND:20261206T123000Z
+SUMMARY:領取 Nana's Empanadas
+LOCATION:國立成功大學 校慶園遊會（攤位位置公告後更新）
+DESCRIPTION:取貨時段：12/6（日）20:00–20:30\n到攤位報「稱呼＋手機後三碼」就能取貨，不用訂單編號。\n超過時段 30 分鐘沒來，那份會放到現場賣。
+URL:https://nanas-empanadas.vercel.app/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:領取 Nana's Empanadas
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
