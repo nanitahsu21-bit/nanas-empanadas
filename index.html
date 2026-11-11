@@ -4,13 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nana's Empanadas｜12/6 成大校慶預購</title>
-<meta name="description" content="手工阿根廷烤餡餅，12/6（日）成大校慶園遊會。預購保證買得到、不用排隊、自己選取貨時段。">
+<meta name="description" content="手工阿根廷烤餡餅，12/6（日）成大校慶園遊會。預購保證買得到、不用排隊、自己選取餐時段。">
 <!-- 連結貼到 LINE 的預覽。上線後把 og:image 改成完整網址，例如 https://你的網址/photos/cerdo.jpg -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nana's Empanadas">
 <meta property="og:title" content="Nana's Empanadas｜12/6 成大校慶預購">
-<meta property="og:description" content="手工阿根廷烤餡餅。預購保證買得到、不用排隊、自己選取貨時段。">
+<meta property="og:description" content="手工阿根廷烤餡餅。預購保證買得到、不用排隊、自己選取餐時段。">
 <meta property="og:image" content="https://nanas-empanadas.vercel.app/photos/cerdo.jpg">
+<link rel="canonical" href="https://nanas-empanadas.vercel.app/">
+<meta name="robots" content="index, follow">
 <meta name="theme-color" content="#FAF3E3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -700,7 +702,7 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
 .flv .ds{font-size:13.5px;letter-spacing:-.01em;text-wrap:balance}
 .flv .ds .nw{white-space:nowrap}
 
-/* 下單成功頁：先看到取貨時間，再看付款；白卡＋細線，跟網站其他地方一致 */
+/* 下單成功頁：先看到取餐時間，再看付款；白卡＋細線，跟網站其他地方一致 */
 .dhead{text-align:center;padding:30px 0 6px}
 .dcheck{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:#EAF2FA;color:var(--skyt);font-family:var(--sans);font-size:22px;font-weight:700}
 .done .dhead h2{margin:12px 0 4px;font-size:26px;font-weight:600;letter-spacing:.06em}
@@ -730,7 +732,7 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
 .done .pcal{background:#EAF2FA;border-color:#C9DDF0}
 .wrap .secret2 p{text-wrap:balance}
 
-/* 成功頁第二版：少一點卡片層級，行事曆收進取貨卡，隱藏口味變成 Nana 的小紙條 */
+/* 成功頁第二版：少一點卡片層級，行事曆收進取餐卡，隱藏口味變成 Nana 的小紙條 */
 .dhead{padding:28px 0 0}
 .dcheck{width:44px;height:44px}
 .done .dhead h2{margin:16px 0 4px}
@@ -758,13 +760,128 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
 .dnin{padding-top:12px}
 .wrap .dnin p{margin:0 0 8px;font-size:14px;line-height:1.75;color:var(--ink)}
 .dfin{min-height:48px;margin:24px 0 44px;border-radius:10px}
+
+/* 預購單：送醬要大大的、讓人有賺到的感覺 */
+.seg button em.gift{display:inline-block;margin-top:3px;padding:1px 7px;border-radius:999px;background:#FDF1CF;color:var(--ink);font-weight:700;font-size:12px}
+.perk:empty{display:none}
+.perk{margin-top:10px;padding:12px 14px;border-radius:10px;background:#FDF6E3;border:1px solid #F3DFA6}
+.wrap .perk p{margin:0;font-family:var(--sans);color:var(--ink)}
+.wrap .perk .pgift{font-size:15px;line-height:1.5}
+.perk .pgift b{display:inline-block;margin-right:8px;font-family:var(--zh);font-size:22px;font-weight:700;color:#C98A00;vertical-align:-2px}
+.wrap .perk .psave{margin-top:4px;font-size:13.5px}
+.perk .psave b{font-size:16px;color:#A84432}
+.perk .pgift+.psave{padding-top:6px;border-top:1px dashed #EAD49A;margin-top:8px}
+.dlist dd .dsave{display:block;margin-top:2px;font-size:13px;font-weight:600;color:#A84432}
+.bar2 .sumfl{line-height:1.45}
+.bar2 .sumperk{color:#A84432;font-weight:600}
+
+/* 成功頁第三版：訂單內容和促銷分開，金額清楚 */
+.dlist div{grid-template-columns:48px 1fr;gap:16px;padding:16px 0}
+.dlist dd{font-size:14px;line-height:1.7}
+.dlist .dsub{display:block;font-size:12px;line-height:1.6;color:var(--muted)}
+.dlist .damt{display:block;font-family:var(--sans);font-size:18px;font-weight:600;line-height:1.4;color:var(--ink)}
+.dcal{padding-top:16px}
+.dcal .pcalbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dcal .pcalbtns a{justify-content:center;font-size:13px;padding:0 8px}
+/* 11/11：Nana 的信＝信紙一角。收起時露出信的開頭、字慢慢淡掉；點了就攤開全文 */
+.stpaper:not(.open) .stbody{height:0}
+.stpaper:not(.open) .stflap{display:none}
+.stpaper:not(.open){margin-top:0;background:none}
+.stbtn{display:block;width:100%;margin:16px 0 4px;padding:24px 22px 18px;border:0;border-radius:2px;background:#FFFDF7;text-align:left;color:var(--ink);cursor:pointer;
+  box-shadow:0 1px 2px rgba(91,42,20,.08),0 12px 28px -16px rgba(91,42,20,.35);transform:rotate(-.6deg);transition:transform .35s ease,box-shadow .35s ease}
+@media (hover:hover){.stbtn:not([aria-expanded="true"]):hover{transform:rotate(0) translateY(-2px);box-shadow:0 1px 2px rgba(91,42,20,.08),0 18px 32px -16px rgba(91,42,20,.4)}}
+.stpv{display:block}
+.stpvto{display:block;margin:0 0 10px;font-family:var(--sans);font-size:13px;letter-spacing:.04em;color:var(--muted)}
+.stpvtx{display:block;height:96px;overflow:hidden;font-family:'Iansui','Noto Serif TC',serif;font-size:17px;line-height:1.9;
+  -webkit-mask-image:linear-gradient(#000 35%,transparent);mask-image:linear-gradient(#000 35%,transparent)}
+.stlab{display:block;margin-top:6px;text-align:center;font-family:var(--sans);font-size:14px;font-weight:500;letter-spacing:.1em}
+.stbtn[aria-expanded="true"]{width:auto;min-height:44px;margin:6px 0 0;padding:0 2px;border-bottom:2px solid rgba(116,172,223,.6);border-radius:0;background:transparent;box-shadow:none;transform:none}
+.stbtn[aria-expanded="true"] .stpv{display:none}
+.stbtn[aria-expanded="true"] .stlab{margin:0;letter-spacing:.04em}
+@media (prefers-reduced-motion:reduce){.stbtn{transition:none}}
+.plan .m .deal{font-style:normal;font-weight:700;color:#A84432}
+.perk .psave s{color:var(--muted)}
+.paycash{margin:0;padding:14px 16px;border:1.5px solid #74ACDF;border-radius:12px;background:#EAF2FA}
+.paycash b{display:block;font-size:17px}.paycash span{font-size:14px;color:var(--muted)}
+.cfm{position:fixed;inset:0;z-index:80;background:rgba(35,24,17,.55);display:flex;align-items:flex-end;justify-content:center}
+.cfm[hidden]{display:none}
+.cfmbox{width:100%;max-width:520px;max-height:92vh;overflow-y:auto;background:#FFFDF7;border-radius:18px 18px 0 0;padding:22px 20px calc(18px + env(safe-area-inset-bottom))}
+.cfmbox h3{margin:0 0 14px;font-family:var(--zh);font-size:21px;text-align:center}
+.cfmsec{border:1px solid var(--rule);border-radius:12px;padding:6px 14px;margin-bottom:10px;background:#fff}
+.cfl,.cfmrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0}
+.cfl+.cfl{border-top:1px solid #EDE5DA}
+.cfl span{font-size:18px;font-weight:700}.cfl b{font-size:22px}
+.cfl.gift span,.cfl.gift b{font-size:15px;color:#A84432}
+.cfmrow{border-bottom:1px solid #EDE5DA;padding:10px 4px}
+.cfmrow span{font-size:14px;color:var(--muted)}.cfmrow b{font-size:18px;text-align:right}
+.cfmrow.tot b{font-size:28px}
+.cfmpay{margin:10px 0 0;text-align:center;font-size:14px;color:#A84432;font-weight:600}
+.cfmbtns{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-top:16px}
+.cfmbtns button{min-height:52px;border-radius:12px;font-size:16px;font-weight:700;border:1px solid var(--rule);background:#fff}
+.cfmbtns #cfmOk{background:var(--ink);color:#FBF3E2;border:0}
+.dlist dd{font-size:16px;font-weight:600}
+/* 11/11：省多少要一眼看到——方案卡上緣的紅標籤＋選了之後跳出的大紅框 */
+.seg{margin-top:16px;overflow:visible}
+.seg button .sv{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:2px 10px;border-radius:999px;background:#A84432;color:#FFF8EC;
+  font-family:var(--sans);font-style:normal;font-size:12px;font-weight:700;line-height:1.5;box-shadow:0 3px 8px -2px rgba(168,68,50,.45)}
+.seg button.on .sv{animation:svPop .45s cubic-bezier(.3,1.6,.5,1)}
+@keyframes svPop{0%{transform:translateX(-50%) scale(.6)}100%{transform:translateX(-50%) scale(1)}}
+.perk{padding:0;background:none;border:0;margin-top:14px}
+.pkdeal{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;padding:16px 18px;border-radius:14px;
+  background:linear-gradient(135deg,#B24A36,#8E3424);color:#FFF8EC;box-shadow:0 12px 26px -14px rgba(142,52,36,.7)}
+.pkbig{padding-right:16px;border-right:1px solid rgba(255,248,236,.3);text-align:center}
+.pkbig small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.1em;opacity:.9}
+.pkbig b{display:block;font-family:var(--disp);font-size:46px;font-weight:700;line-height:1.05;color:#FFE7A8}
+.pkbig b span{font-family:var(--sans);font-size:15px;font-weight:700;margin:0 2px}
+.wrap .perk .pkdet p{margin:0;font-family:var(--sans);font-size:14px;line-height:1.65;color:#FFF8EC}
+.wrap .perk .pkdet p.pkline{margin-top:6px;padding-top:6px;border-top:1px dashed rgba(255,248,236,.35);font-size:13px}
+.pkdet s{opacity:.7}.pkdet .pkline b{font-size:16px;color:#FFE7A8}
+.pkdeal.pop{animation:dealPop .5s cubic-bezier(.3,1.5,.5,1)}
+@keyframes dealPop{0%{transform:scale(.92);opacity:.3}100%{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.pkdeal.pop,.seg button.on .sv{animation:none}}
+/* 11/11 第二版：收斂成比較高級的樣子——細字、襯線數字、米白底、細金線，動作只淡入不彈跳 */
+.seg button .sv{top:-10px;padding:1px 8px;border:1px solid rgba(142,52,36,.55);border-radius:2px;background:#FFFDF7;color:#8E3424;
+  font-weight:500;font-size:11.5px;letter-spacing:.06em;box-shadow:none}
+.seg button.on .sv{animation:none;background:#8E3424;color:#FFFDF7;border-color:#8E3424}
+.seg button em.gift{padding:0;background:none;border-radius:0;font-style:normal;font-weight:500;font-size:12px;letter-spacing:.04em;color:#8E3424}
+.pkdeal{grid-template-columns:auto 1fr auto;gap:16px;padding:18px 18px 16px;border-radius:4px;background:#FFFDF7;color:var(--ink);
+  border:1px solid rgba(91,42,20,.14);border-top:2px solid #C99A2E;box-shadow:0 10px 26px -18px rgba(91,42,20,.45)}
+.pkbig{border-right:1px solid rgba(91,42,20,.14);padding-right:16px}
+.pkbig small{font-size:11.5px;letter-spacing:.14em;color:var(--muted);opacity:1}
+.pkbig b{font-family:'Bodoni Moda',serif;font-weight:500;font-size:44px;color:#8E3424;letter-spacing:-.01em}
+.pkbig b span{font-family:var(--sans);font-weight:400;font-size:14px;color:#8E3424}
+.wrap .perk .pkdet p{font-weight:400;font-size:13.5px;color:var(--ink)}
+.wrap .perk .pkdet p.pkline{border-top:1px solid rgba(91,42,20,.12);color:var(--muted)}
+.pkdet .pkline b{font-weight:600;color:var(--ink)}
+.pksauce{margin:0;text-align:center}
+.pksauce img{display:block;width:64px;height:64px;border-radius:50%;object-fit:cover;border:1px solid rgba(91,42,20,.12)}
+.pksauce figcaption{margin-top:3px;font-family:var(--sans);font-size:10.5px;color:var(--muted)}
+.pkdeal.pop{animation:dealFade .45s ease-out}
+@keyframes dealFade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (max-width:360px){.pkdeal{grid-template-columns:auto 1fr}.pksauce{display:none}}
+.pkdeal{grid-template-columns:auto 1fr}
+.wrap .perk .pkdet p.pkgift{display:flex;align-items:center;gap:10px;margin-top:8px}
+.pkgift img{flex:none;width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid rgba(91,42,20,.14)}
+.pkgift span{line-height:1.45}
+.pkgift small{display:block;font-size:11.5px;color:var(--muted)}
+.note.nocombo{margin-top:4px;padding-left:10px;border-left:2px solid #C99A2E;font-style:normal;color:var(--ink)}
+.cfmnote{margin:6px 0 0;text-align:center;font-size:12.5px;line-height:1.6;color:var(--muted)}
+.hperks{display:flex;justify-content:center;margin:18px auto 0;padding:0;list-style:none;border-top:1px solid rgba(91,42,20,.18);border-bottom:1px solid rgba(91,42,20,.18);max-width:360px}
+.hperks li{flex:1;padding:10px 4px;font-family:var(--zh);font-size:15px;font-weight:600;letter-spacing:.06em;color:var(--ink);white-space:nowrap}
+.hperks li+li{border-left:1px solid rgba(91,42,20,.18)}
+.hperks li:before{content:"✓";display:block;margin-bottom:2px;font-family:var(--sans);font-size:12px;color:var(--skyt)}
+.plan .d .deal{font-weight:700;color:#8E3424}
+.wrap .paywhy{margin:12px 0 0;padding:14px 16px;border-radius:4px;background:#FFFDF7;border-top:1px solid rgba(91,42,20,.12);font-family:'Iansui','Noto Serif TC',serif;font-size:15px;line-height:1.85;color:var(--ink)}
+.paywhy b{display:block;margin-bottom:4px;font-family:var(--zh);font-size:15px;font-weight:600}
+.paywhy .sig{display:block;text-align:right;font-family:var(--disp);font-style:italic;font-size:15px;margin-top:2px}
+.wrap .paywhy{font-family:var(--sans);font-size:14px;line-height:1.8;background:#fff;border:1px solid rgba(91,42,20,.12)}
 </style>
 </head>
 <body class="pre-closed">
 <div class="band"></div>
 <div class="topbar"><div class="wrap"><span class="logo">NANA'S EMPANADAS</span><div class="tright"><div class="langs" role="group" aria-label="語言 Language Idioma"><button type="button" data-lang="zh" lang="zh-Hant">中</button><button type="button" data-lang="en" lang="en">EN</button><button type="button" data-lang="es" lang="es">ES</button></div><a class="toplink" href="#flavors" data-i18n="nav.choose">選口味</a></div></div></div>
-<nav class="nowbar" id="nowbar" aria-label="章節"><div class="wrap"><a href="#flavors" data-sec="flavors">口味</a><a href="#plans" data-sec="plans">方案</a><a href="#story" data-sec="story">Nana</a><a href="#wall" data-sec="wall">阿根廷</a><a href="#how" data-sec="how">取貨</a></div></nav>
-<nav class="sidenav" id="sidenav" aria-label="章節"><a href="#flavors" data-sec="flavors">口味</a><a href="#plans" data-sec="plans">方案</a><a href="#story" data-sec="story">Nana</a><a href="#wall" data-sec="wall">阿根廷</a><a href="#how" data-sec="how">取貨</a></nav>
+<nav class="nowbar" id="nowbar" aria-label="章節"><div class="wrap"><a href="#flavors" data-sec="flavors">口味</a><a href="#plans" data-sec="plans">方案</a><a href="#story" data-sec="story">Nana</a><a href="#wall" data-sec="wall">阿根廷</a><a href="#how" data-sec="how">取餐</a></div></nav>
+<nav class="sidenav" id="sidenav" aria-label="章節"><a href="#flavors" data-sec="flavors">口味</a><a href="#plans" data-sec="plans">方案</a><a href="#story" data-sec="story">Nana</a><a href="#wall" data-sec="wall">阿根廷</a><a href="#how" data-sec="how">取餐</a></nav>
 <div class="demo" id="demo">示範模式：還沒連到試算表</div>
 
 <main class="wrap">
@@ -777,6 +894,7 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
     <figure class="hphoto"><img src="photos/cerdo.jpg" alt="經典起司豬肉 empanada 的切面，內餡有豬肉、蛋、紅甜椒和起司"></figure>
     <p class="hdate">12/6（日）・成大校慶園遊會</p>
     <p class="htime">15:00–21:00</p>
+    <ul class="hperks"><li><span>保證買得到</span></li><li><span>不用排隊</span></li><li><span>自己選取餐時間</span></li></ul>
     <p class="hstatus" id="hstatus" hidden></p>
     <div class="hcal"><button class="calbtn" id="hcalBtn" type="button" aria-expanded="false" aria-controls="hcalMenu"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><rect x="1.5" y="3" width="13" height="11.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M1.5 6.5h13M5 1.5v3M11 1.5v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg><span>加入校慶行事曆</span></button>
       <div class="calmenu" id="hcalMenu" hidden><a href="calendar/fair.ics">iPhone／Apple 行事曆</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=%E6%88%90%E5%A4%A7%E6%A0%A1%E6%85%B6%E5%9C%92%E9%81%8A%E6%9C%83%E3%83%BBNana%27s+Empanadas&amp;dates=20261206T070000Z%2F20261206T130000Z&amp;location=%E5%9C%8B%E7%AB%8B%E6%88%90%E5%8A%9F%E5%A4%A7%E5%AD%B8+%E6%A0%A1%E6%85%B6%E5%9C%92%E9%81%8A%E6%9C%83%EF%BC%88%E6%94%A4%E4%BD%8D%E4%BD%8D%E7%BD%AE%E5%85%AC%E5%91%8A%E5%BE%8C%E6%9B%B4%E6%96%B0%EF%BC%89&amp;details=%E6%89%8B%E5%B7%A5%E9%98%BF%E6%A0%B9%E5%BB%B7%E7%83%A4%E9%A4%A1%E9%A4%85+empanadas%EF%BC%8C15%3A00%E2%80%9321%3A00+%E5%9C%A8%E6%88%90%E5%A4%A7%E6%A0%A1%E6%85%B6%E5%9C%92%E9%81%8A%E6%9C%83%E3%80%82%0A%E9%A0%90%E8%B3%BC%EF%BC%9Ahttps%3A%2F%2Fnanas-empanadas.vercel.app%2F" target="_blank" rel="noopener">Google 行事曆</a></div></div>
@@ -797,8 +915,8 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
     <p class="sck">CHIMICHURRI・第二種吃法</p>
     <h3 id="sauceT">先吃原味，再沾一口阿根廷。</h3>
     <div class="scin">
-      <figure class="scfig"><img src="photos/sauce_ai.jpg" alt="示意圖：一杯用香料和紅椒粉調的 Chimichurri 醬，旁邊是一顆切開的 empanada" width="120" height="120"><figcaption>示意圖</figcaption></figure>
-      <p class="scd">阿根廷烤肉桌上的經典搭配。我用香料和紅椒粉調製，蒜香、微酸、微辣，沾著餡餅吃，多一層香氣。</p>
+      <figure class="scfig"><img src="photos/sauce_red.jpg" alt="示意圖：一小碗 Chimichurri 醬，紅褐色的油醬裡有紅椒丁、洋蔥丁和香料" width="120" height="120"><figcaption>示意圖</figcaption></figure>
+      <p class="scd">阿根廷烤肉桌上的經典搭配。我用新鮮紅椒丁、洋蔥、蒜和香料，泡在橄欖油和醋裡，蒜香、微酸、微辣，沾著餡餅吃，多一層香氣。</p>
     </div>
     <p class="sctag">3 顆／6 顆預購組合，附醬一杯（60 ml）</p>
   </section>
@@ -806,13 +924,13 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
   <section class="zone" id="plans">
     <div class="head"><span>預購方案</span></div>
     <p class="es">Preventa</p>
-    <p class="pk2">預購保證買得到、不用排隊，還能自己選取貨時段。</p>
+    <p class="pk2">預購保證買得到、不用排隊，還能自己選取餐時段。</p>
     <p class="avail2" id="avail" aria-live="polite"><span class="ad"></span>預購還剩 <b id="rem">--</b> 顆・<span id="deadline">讀取中⋯</span><i id="barfill" hidden></i></p>
-    <div class="plan"><div class="h"><span class="k">2 顆</span><span class="dots"></span><span class="p">120–140<small>元</small></span></div><p class="d">依口味的現場價加總，再減 10 元</p><p class="m">豬肉兩顆 140、一豬一玉米 130、玉米兩顆 120</p></div>
-    <div class="plan"><div class="h"><span class="k">3 顆</span><span class="dots"></span><span class="p">200<small>元</small></span></div><p class="d">口味自由選，附 Chimichurri 醬一杯</p><p class="m">醬料 60 ml，價值 $35・現場買 3 顆最多 225 元</p></div>
-    <div class="plan" style="border-bottom:0"><div class="h"><span class="k">6 顆<span class="best">最划算</span></span><span class="dots"></span><span class="p">390<small>元</small></span></div><p class="d">口味自由選，附 Chimichurri 醬一杯</p><p class="m">醬料 60 ml，價值 $35・現場買 6 顆最多 450 元</p></div>
+    <div class="plan"><div class="h"><span class="k">2 顆</span><span class="dots"></span><span class="p">120–140<small>元</small></span></div><p class="d">不附醬・<b class="deal">比單買便宜 10 元</b></p></div>
+    <div class="plan"><div class="h"><span class="k">3 顆</span><span class="dots"></span><span class="p">175–205<small>元</small></span></div><p class="d">送醬一杯・<b class="deal">比單買便宜 55 元</b></p></div>
+    <div class="plan" style="border-bottom:0"><div class="h"><span class="k">6 顆<span class="best">最划算</span></span><span class="dots"></span><span class="p">335–395<small>元</small></span></div><p class="d">送醬一杯・<b class="deal">比單買便宜 90 元</b></p></div>
     <p class="note">預購最少 2 顆，不開放單顆。</p>
-    <p class="hidden-hint"><span aria-hidden="true">★</span>當天另有隱藏口味，僅限現場購買，不開放預留。</p>
+    <p class="note nocombo">預購已是最優惠價，不能再用現場優惠。</p>
   </section>
 
   <section class="story" id="story" aria-labelledby="storyT">
@@ -820,7 +938,7 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
     <h2 id="storyT">把家鄉的味道，帶到你面前</h2>
     <div class="stflag" aria-hidden="true"></div>
     <p class="stshort" id="storyShort">成大的阿根廷學生只有三個，我是其中一個。畢業前最後一次校慶，想把家鄉的味道帶給你。</p>
-    <button class="stbtn" id="storyBtn" type="button" aria-expanded="false" aria-controls="storyBody">閱讀 Nana 的故事 ＋</button>
+    <button class="stbtn" id="storyBtn" type="button" aria-expanded="false" aria-controls="storyBody"><span class="stpv" aria-hidden="true"><span class="stpvto">給成大的你：</span><span class="stpvtx">Hola，我是 Nana，來自阿根廷，現在是成大的大四學生。在成大，來自阿根廷的學生少到一隻手就數得完⋯</span></span><span class="stlab">繼續讀 ↓</span></button>
     <div class="stpaper" id="storyPaper">
       <div class="stflap" aria-hidden="true"></div>
       <div class="stbody" id="storyBody">
@@ -829,7 +947,7 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
         <p>Hola，我是 Nana，來自阿根廷，現在是成大的大四學生。</p>
         <p>在成大，來自阿根廷的學生少到一隻手就數得完，目前只有三個。每次介紹自己來自哪裡，我都覺得，除了地圖上的位置，還有好多家鄉的日常，想分享給大家。</p>
         <p>趁著畢業前最後一次校慶，我想完成一個一直放在心裡的小夢想：親手做 empanadas，把熟悉的家鄉味道帶到你面前。</p>
-        <p>對你來說，這可能是第一次嘗試的新口味；對我來說，卻是想念家鄉時會惦記的滋味。想到能在成大和大家分享，就覺得很期待。</p>
+        <p>對你來說，這可能是第一次嘗試的新口味；對我來說，卻是想家的時候，最想吃到的味道。想到能在成大和大家分享，就覺得很期待。</p>
         <p>阿根廷在世界的另一端，路途很遠，機票也不便宜。但也許不用搭上長途飛機，在校慶逛攤位的時候，就能先嚐到一點阿根廷的日常。</p>
         <p>很開心能在畢業前，讓我遠方的家，和這幾年生活的成大，有這樣一次相遇。</p>
         <p>12/6，期待把這份味道分享給你。</p>
@@ -845,24 +963,23 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
       <article class="wc"><div class="wm"><img src="photos/ar_market.jpg" alt="布宜諾斯艾利斯市集上，阿根廷人現場手工包 empanadas" style="object-position:center 62%"></div><div class="wt"><p class="wk">01 · EMPANADAS</p><h3>什麼是 Empanadas？</h3><p>麵皮包著餡料，用烤的或炸的。名字來自西班牙文 empanar，意思是「包起來」。在阿根廷，市集和街角都買得到。</p><p class="ws"><span>照片：布宜諾斯艾利斯市集・Gadish・</span><a href="https://commons.wikimedia.org/wiki/File:Argentine-woman-making-empanadas.JPG" target="_blank" rel="noopener">公有領域</a></p></div></article>
       <article class="wc"><a class="wm mapm" id="worldmap" href="https://www.google.com/maps/search/?api=1&query=Argentina" target="_blank" rel="noopener" aria-label="世界地圖：台灣和阿根廷，點一下用 Google 地圖看阿根廷"><svg viewBox="0 0 160 224" role="img" aria-label="南美洲地圖，阿根廷標成藍色"><polygon points="16.0,14.4 22.4,6.4 32.0,3.2 35.2,6.4 44.8,8.0 57.6,8.0 67.2,9.6 70.4,16.0 80.0,22.4 89.6,24.0 99.2,28.8 102.4,36.8 108.8,43.2 121.6,48.0 134.4,51.2 150.4,59.2 150.4,70.4 142.4,80.0 137.6,96.0 134.4,108.8 128.0,115.2 118.4,116.8 108.8,124.8 105.6,134.4 96.0,144.0 89.6,152.0 80.0,153.3 78.4,160.0 78.4,164.8 64.0,166.4 63.0,172.8 54.4,172.8 56.0,177.6 52.8,185.6 46.4,190.4 51.2,195.2 43.2,203.2 41.6,208.0 44.8,212.8 49.6,217.6 43.2,217.6 35.2,214.4 24.0,208.0 20.8,195.2 25.6,182.4 27.2,169.6 27.2,160.0 33.0,147.2 33.6,137.6 36.8,124.8 37.4,112.0 37.8,100.8 19.2,86.4 9.6,67.2 3.2,57.6 6.4,48.0 4.8,41.6 11.2,35.2 14.4,28.8 14.7,19.2" fill="#FBF5E6" stroke="#231F1C" stroke-width="1.4" stroke-linejoin="round"/><polygon points="48.0,113.6 54.4,112.0 62.4,112.6 70.4,118.4 76.8,123.2 83.8,129.0 89.6,124.8 90.6,128.0 78.1,138.2 75.5,148.8 75.2,151.0 78.4,156.8 78.4,164.8 64.0,166.4 63.0,172.8 54.4,172.8 56.0,177.6 52.8,185.6 46.4,190.4 51.2,195.2 43.2,203.2 41.6,208.0 43.8,209.3 42.9,217.3 49.6,217.0 42.9,209.9 33.6,201.6 32.0,192.0 33.0,182.4 33.6,172.8 35.2,163.2 37.8,153.6 38.4,144.0 41.6,131.2 44.8,121.6" fill="#74ACDF" stroke="#231F1C" stroke-width="1.4" stroke-linejoin="round"/><text x="55" y="170" text-anchor="middle" font-size="11.5" font-weight="700" fill="#231F1C" data-tz="阿根廷">阿根廷</text><circle cx="79" cy="137" r="2.6" fill="#5B2A14"/><text x="84" y="140" font-size="8" fill="#5B2A14">Buenos Aires</text></svg></a><div class="wt"><p class="wk">02 · ARGENTINA</p><h3>地球另一邊的家鄉</h3><p>阿根廷在南美洲的最南端，離台灣很遠。這次，透過一顆手作烤餡餅，讓我們靠近一點。</p><p class="ws"><span>地圖資料：Natural Earth・</span><a href="https://www.google.com/maps/search/?api=1&query=Argentina" target="_blank" rel="noopener">點這裡看 Google 地圖</a></p></div></article>
       <article class="wc"><div class="wm"><img src="photos/ar_futbol.jpg" alt="2022 年阿根廷拿下世界盃後，布宜諾斯艾利斯方尖碑附近擠滿慶祝的球迷"></div><div class="wt"><p class="wk">03 · FÚTBOL</p><h3>三座世界盃，一起瘋足球</h3><p>1978、1986、2022，三次世界盃冠軍。從馬拉度納到梅西，足球讓不同世代一起歡呼。</p><p class="ws"><span>照片：2022 世界盃奪冠，方尖碑前的慶祝・GCBA・</span><a href="https://commons.wikimedia.org/wiki/File:Festejos_en_el_Obelisco_de_Buenos_Aires_por_la_obtenci%C3%B3n_de_la_Copa_del_Mundo_de_F%C3%BAtbol_2022.jpg" target="_blank" rel="noopener">CC BY 2.5 AR</a></p></div></article>
-      <article class="wc"><div class="wm"><img src="photos/ar_asado.jpg" alt="磚砌烤爐裡燒著柴火，烤架上有兩塊牛肉"></div><div class="wt"><p class="wk">04 · ASADO</p><h3>烤肉之外，還有這一味</h3><p>Asado 是阿根廷的烤肉聚會。大家顧著炭火、聊聊近況，一起慢慢吃。</p><div class="wsauce"><img class="scup" src="photos/sauce_cup_ai.jpg" alt="" width="52" height="52"><p>這次附的 Chimichurri，就是阿根廷人烤肉時常沾的醬。沾 empanadas 也很搭，可以試試看。</p></div><a class="wback" href="#sauce">看看這次附的醬 ↑</a><p class="ws"><span>照片：Maxd2・</span><a href="https://commons.wikimedia.org/wiki/File:Asado_tradicional_argentino,_le%C3%B1a,_brasas.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></p></div></article>
+      <article class="wc"><div class="wm"><img src="photos/ar_asado.jpg" alt="磚砌烤爐裡燒著柴火，烤架上有兩塊牛肉"></div><div class="wt"><p class="wk">04 · ASADO</p><h3>烤肉之外，還有這一味</h3><p>Asado 是阿根廷的烤肉聚會。大家顧著炭火、聊聊近況，一起慢慢吃。</p><div class="wsauce"><img class="scup" src="photos/sauce_red.jpg" alt="" width="52" height="52"><p>這次附的 Chimichurri，就是阿根廷人烤肉時常沾的醬。沾 empanadas 也很搭，可以試試看。</p></div><a class="wback" href="#sauce">看看這次附的醬 ↑</a><p class="ws"><span>照片：Maxd2・</span><a href="https://commons.wikimedia.org/wiki/File:Asado_tradicional_argentino,_le%C3%B1a,_brasas.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></p></div></article>
       
     </div>
     <div class="dots" id="dots" aria-hidden="true"></div>
   </section>
 
   <section class="zone" id="how">
-    <div class="head"><span>怎麼取貨</span></div>
+    <div class="head"><span>怎麼取餐</span></div>
     <p class="es">Cómo retirar</p>
     <ol class="steps">
-      <li><div><b>預購</b>　選口味、填稱呼和手機、選取貨時段，約 1 分鐘，不用註冊。</div></li>
-      <li><div><b>付款</b>　可以轉帳、LINE Pay，或取貨時付現金。轉帳和 LINE Pay 收到款項才算訂到。</div></li>
-      <li><div><b>12/6 來攤位</b>　在你選的時段，報「稱呼＋手機後三碼」，就能拿到熱熱的餡餅。</div></li>
+      <li><div><b>預購</b>　選口味、填稱呼和電話、選取餐時段，約 1 分鐘，不用註冊。</div></li>
+      <li><div><b>付款</b>　12/6 取餐時在攤位付款就好，不用先轉帳。</div></li>
+      <li><div><b>12/6 來攤位</b>　在你選的時段，報「稱呼＋電話後三碼」，就能拿到熱熱的餡餅。</div></li>
     </ol>
     <div class="faq" style="margin-top:6px">
-      <details><summary>為什麼要留手機？</summary><p>只用來核對取貨和聯絡你，不做其他用途，活動結束後會刪除。</p></details>
+      <details><summary>為什麼只收現場付款？</summary><p>因為相信大家，預購不收訂金，取餐時再付就好。攤位只營業 12/6 一天，還請準時取餐，謝謝！</p></details>
       <details><summary>沒有準時來怎麼辦？</summary><p>超過你選的時段 30 分鐘還沒來，那份會改成現場販售。</p></details>
-      <details><summary>可以退款嗎？</summary><p>有問題請直接用 LINE 跟我們說，會一起想辦法。</p></details>
     </div>
   </section>
 
@@ -870,28 +987,26 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
     <div class="guarda" style="margin-bottom:22px"></div>
     <div class="fsrc"><span>資料來源：</span><a href="https://zh.wikipedia.org/wiki/%E6%81%A9%E6%BD%98%E7%B4%8D%E9%81%94" target="_blank" rel="noopener">維基百科：恩潘納達</a>・<a href="https://en.wikipedia.org/wiki/Empanada" target="_blank" rel="noopener">Wikipedia: Empanada</a>・<a href="https://en.wikipedia.org/wiki/Argentina" target="_blank" rel="noopener">Argentina</a>・<a href="https://en.wikipedia.org/wiki/Argentina_national_football_team" target="_blank" rel="noopener">國家足球隊</a>・<a href="https://en.wikipedia.org/wiki/Lionel_Messi" target="_blank" rel="noopener">Lionel Messi</a>・<a href="https://en.wikipedia.org/wiki/Asado" target="_blank" rel="noopener">Asado</a></div>
     <a class="linebtn" id="lineBtn" style="display:none" target="_blank" rel="noopener">加入 LINE 官方帳號</a>
-    <div>客人資料只用來聯絡取貨，活動後會刪除。</div>
+    <div>客人資料只用來聯絡取餐，活動後會刪除。</div>
     <div>Nana's Empanadas　成大阿根廷學生　親手做</div>
   </footer>
 </main>
 
-<div class="cta"><button id="cta" data-open>開始選購</button></div>
+<div class="cta"><button id="cta" data-open>選口味・看價錢</button></div>
 
 <!-- 預購單 -->
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="預購單">
   <div class="sh"><div class="wrap"><b>預購單</b><div class="tright"><div class="langs" role="group" aria-label="語言 Language Idioma"><button type="button" data-lang="zh" lang="zh-Hant">中</button><button type="button" data-lang="en" lang="en">EN</button><button type="button" data-lang="es" lang="es">ES</button></div><button class="x" id="close" aria-label="關閉">×</button></div></div></div>
   <div class="wrap" id="form">
     <p class="reqnote"><span class="req" aria-hidden="true">*</span> 為必填</p>
-    <div class="blk"><h3><i>01</i><span>選方案</span><span class="req" aria-hidden="true">*</span></h3><div class="seg" id="seg"></div></div>
+    <div class="blk"><h3><i>01</i><span>選方案</span><span class="req" aria-hidden="true">*</span></h3><div class="seg" id="seg"></div><div class="perk" id="perk"></div></div>
     <div class="blk"><h3><i>02</i><span>選口味</span><span class="req" aria-hidden="true">*</span><em id="need"></em></h3><div id="fls"></div></div>
-    <div class="blk"><h3><i>03</i><span>稱呼和手機</span><span class="req" aria-hidden="true">*</span></h3>
-      <div class="f"><label for="nm">稱呼<span class="req" aria-hidden="true">*</span></label><input id="nm" autocomplete="name" maxlength="20" placeholder="取貨時報這個名字"></div>
-      <div class="f"><label for="ph">手機號碼<span class="req" aria-hidden="true">*</span></label><input id="ph" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="09 開頭的 10 碼"><small>取貨時報稱呼和手機後三碼就好。</small></div>
+    <div class="blk"><h3><i>03</i><span>稱呼和電話</span><span class="req" aria-hidden="true">*</span></h3>
+      <div class="f"><label for="nm">稱呼<span class="req" aria-hidden="true">*</span></label><input id="nm" autocomplete="name" maxlength="20" placeholder="取餐時報這個名字"></div>
+      <div class="f"><label for="ph">電話<span class="req" aria-hidden="true">*</span></label><input id="ph" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="例如 0912345678"><small>取餐時報稱呼和電話後三碼就好。</small></div>
     </div>
-    <div class="blk"><h3><i>04</i><span>取貨時段</span><span class="req" aria-hidden="true">*</span></h3><p class="blksub">12/6（日）・每個時段名額有限，額滿就不能選</p><div class="slots" id="slots"></div></div>
-    <div class="blk"><h3><i>05</i><span>付款方式</span><span class="req" aria-hidden="true">*</span></h3><div class="pay" id="pay"></div><p class="note" id="payHint" hidden>想換付款方式，再點一次目前選的項目。</p>
-      <div class="f" id="lineBox" style="display:none;margin-top:14px"><label for="ln">你的 LINE 名稱<span class="req" aria-hidden="true">*</span></label><input id="ln" maxlength="30" placeholder="你在 LINE 上顯示的名字"><small>我會用它核對你的 LINE Pay 付款。</small></div>
-    </div>
+    <div class="blk"><h3><i>04</i><span>取餐時段</span><span class="req" aria-hidden="true">*</span></h3><p class="blksub">12/6（日）・每個時段名額有限，額滿就不能選</p><div class="slots" id="slots"></div></div>
+    <div class="blk"><h3><i>05</i><span>付款方式</span></h3><p class="paycash"><b>現場付款</b><span>12/6 取餐時，在攤位付錢就好。</span></p></div>
     <div class="blk"><h3><i>06</i><span>備註</span><small class="opt">選填</small></h3>
       <div class="f"><textarea id="nt" maxlength="200" rows="3" placeholder="有想跟 Nana 說的話，或想先問的問題"></textarea><small>最多 200 字，可以不填。</small></div>
     </div>
@@ -899,6 +1014,7 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
     <div style="height:130px"></div>
   </div>
   <div class="wrap done" id="done" style="display:none"></div>
+  <div class="cfm" id="cfm" hidden data-i18n-skip><div class="cfmbox" role="dialog" aria-modal="true" aria-labelledby="cfmT"><div id="cfmBody"></div><div class="cfmbtns"><button type="button" id="cfmBack"></button><button type="button" id="cfmOk"></button></div></div></div>
   <div class="bar2" id="bar2"><div class="in"><div class="sum"><b id="sumTop">3 顆</b><span class="sumfl" id="sumFl"></span><small id="sumMiss"></small></div><button id="go" disabled>送出預購</button></div></div>
 </div>
 
@@ -908,7 +1024,9 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
    訂單送進試算表的內容（付款方式、時段）一律維持中文，方便 Nana 對單。 */
 const I18N = {
 en: {
-  'nav.choose':'Flavors','口味':'Flavors','方案':'Packs','阿根廷':'Argentina','取貨':'Pickup',
+  '確認一下你的預購':'Please check your order','為什麼只收現場付款？':'Why pay at the stall?','因為相信大家，預購不收訂金，取餐時再付就好。攤位只營業 12/6 一天，還請準時取餐，謝謝！':'We trust you, so there’s no deposit — just pay at pickup. The stall is open on Dec 6 only, so please pick up on time. Thank you!','不附醬・<b class="deal">比單買便宜 10 元</b>':'No sauce · <b class="deal">NT$10 less than singles</b>','送醬一杯・<b class="deal">比單買便宜 55 元</b>':'Free sauce · <b class="deal">NT$55 less than singles</b>','送醬一杯・<b class="deal">比單買便宜 90 元</b>':'Free sauce · <b class="deal">NT$90 less than singles</b>','保證買得到':'Guaranteed','不用排隊':'No line','自己選取餐時間':'Pick your time','預購已是最優惠價，不能再用現場優惠。':'Pre-order is already our best price — no extra stall discounts.','比單買便宜':'You save','再送 Chimichurri 醬一杯':'Plus a free cup of chimichurri','價值 35 元・圖為示意':'Worth NT$35 · illustration','示意圖':'Illustration','回去修改':'Go back and edit','確認送出':'Confirm & send','取餐':'Pickup','電話':'Phone','送 Chimichurri 醬':'Free chimichurri','12/6 取餐時現場付款':'Pay at the stall on Dec 6','現場付款':'Pay at the stall','預購完成・取餐時現場付款':'Pre-order complete · pay at the stall',
+  '<b>現場付款</b><span>12/6 取餐時，在攤位付錢就好。</span>':'<b>Pay at the stall</b><span>Just pay when you pick up on Dec 6.</span>',
+  'nav.choose':'Flavors','口味':'Flavors','方案':'Packs','阿根廷':'Argentina','取餐':'Pickup',
   '阿根廷手工烤餡餅':'Handmade Argentine empanadas',
   '來自阿根廷，親手包給你。':'From Argentina, folded by hand for you.',
   '12/6（日）・成大校慶園遊會':'Sun, Dec 6 · NCKU Anniversary Fair',
@@ -926,29 +1044,29 @@ en: {
   '三個口味都含蛋、奶、小麥，每顆約手掌大。':'All three contain egg, dairy and wheat. Each one is palm-sized.',
   'CHIMICHURRI・第二種吃法':'CHIMICHURRI · ANOTHER WAY TO EAT IT',
   '先吃原味，再沾一口阿根廷。':'Try it plain first, then dip into Argentina.',
-  '阿根廷烤肉桌上的經典搭配。我用香料和紅椒粉調製，蒜香、微酸、微辣，沾著餡餅吃，多一層香氣。':'The classic partner on an Argentine asado table. I make it with herbs and paprika — garlicky, a little tangy and a little spicy. Dip your empanada in it for an extra layer of flavor.',
+  '阿根廷烤肉桌上的經典搭配。我用新鮮紅椒丁、洋蔥、蒜和香料，泡在橄欖油和醋裡，蒜香、微酸、微辣，沾著餡餅吃，多一層香氣。':'The classic partner on an Argentine asado table. I make it with fresh diced red pepper, onion, garlic and herbs in olive oil and vinegar: garlicky, a little tangy, a little spicy. Dip your empanada in it for another layer of flavor.',
   '3 顆／6 顆預購組合，附醬一杯（60 ml）':'The 3- and 6-packs come with one cup of sauce (60 ml)',
   '預購 3 顆／6 顆，附 Chimichurri 一杯':'Pre-order 3 or 6 and get a cup of chimichurri',
   '預購方案':'Pre-order packs',
-  '預購保證買得到、不用排隊，還能自己選取貨時段。':'Pre-ordering guarantees you get some, skips the line and lets you pick your pickup time. The 3- and 6-packs come with a cup of chimichurri.',
+  '預購保證買得到、不用排隊，還能自己選取餐時段。':'Pre-ordering guarantees you get some, skips the line and lets you pick your pickup time. The 3- and 6-packs come with a cup of chimichurri.',
   '<span class="ad"></span>預購還剩 <b id="rem">--</b> 顆・<span id="deadline">讀取中⋯</span><i id="barfill" hidden></i>':'<span class="ad"></span><b id="rem">--</b> left for pre-order · <span id="deadline">Loading…</span><i id="barfill" hidden></i>',
   '2 顆':'2 pcs','3 顆':'3 pcs','6 顆<span class="best">最划算</span>':'6 pcs<span class="best">Best value</span>',
-  '120–140<small>元</small>':'120–140<small>NTD</small>','200<small>元</small>':'200<small>NTD</small>','390<small>元</small>':'390<small>NTD</small>',
-  '依口味的現場價加總，再減 10 元':'Stall prices added up, minus NT$10',
-  '豬肉兩顆 140、一豬一玉米 130、玉米兩顆 120':'2 pork: 140 · 1 pork + 1 corn: 130 · 2 corn: 120',
-  '口味自由選，附 Chimichurri 醬一杯':'Any flavors you like + a cup of Argentine chimichurri',
-  '醬料 60 ml，價值 $35・現場買 3 顆最多 225 元':'Free 60 ml sauce worth NT$35 · up to NT$225 for 3 at the stall',
-  '醬料 60 ml，價值 $35・現場買 6 顆最多 450 元':'Free 60 ml sauce worth NT$35 · up to NT$450 for 6 at the stall',
+  '120–140<small>元</small>':'120–140<small>NTD</small>','175–205<small>元</small>':'175–205<small>NTD</small>','335–395<small>元</small>':'335–395<small>NTD</small>',
+  '比單買便宜 10 元':'NT$10 less than buying one by one',
+  
+  
+  
+  
   '預購最少 2 顆，不開放單顆。':'No single pieces for pre-order.',
-  '<span aria-hidden="true">★</span>當天另有隱藏口味，僅限現場購買，不開放預留。':'<span aria-hidden="true">★</span>There’s also a secret flavor on the day — only at the stall, no reservations.',
+  
   '把家鄉的味道，帶到你面前':'Bringing the taste of home to you',
   '成大的阿根廷學生只有三個，我是其中一個。畢業前最後一次校慶，想把家鄉的味道帶給你。':'There are only three Argentine students at NCKU, and I’m one of them. For my last anniversary fair before graduating, I want to bring you the taste of home.',
-  '閱讀 Nana 的故事 ＋':'Read Nana’s letter +','收起故事 −':'Close the letter −',
+  '繼續讀 ↓':'Keep reading ↓','Hola，我是 Nana，來自阿根廷，現在是成大的大四學生。在成大，來自阿根廷的學生少到一隻手就數得完⋯':'Hola, I’m Nana. I’m from Argentina and I’m a senior at NCKU. At NCKU you can count the Argentine students on one hand…','收起信 −':'Close the letter −',
   '給成大的你：':'To you at NCKU,',
   'Hola，我是 Nana，來自阿根廷，現在是成大的大四學生。':'Hola, I’m Nana. I’m from Argentina and I’m a senior at NCKU.',
   '在成大，來自阿根廷的學生少到一隻手就數得完，目前只有三個。每次介紹自己來自哪裡，我都覺得，除了地圖上的位置，還有好多家鄉的日常，想分享給大家。':'At NCKU you can count the Argentine students on one hand — right now there are only three of us. Every time I say where I’m from, I feel there’s so much more than a spot on the map: so many everyday things from home I want to share.',
   '趁著畢業前最後一次校慶，我想完成一個一直放在心裡的小夢想：親手做 empanadas，把熟悉的家鄉味道帶到你面前。':'For my last anniversary fair before graduating, I want to make a little dream come true: making empanadas by hand and bringing the familiar taste of home to you.',
-  '對你來說，這可能是第一次嘗試的新口味；對我來說，卻是想念家鄉時會惦記的滋味。想到能在成大和大家分享，就覺得很期待。':'For you, it might be a flavor you’re trying for the first time; for me, it’s the taste I think of when I miss home. Just imagining sharing it with everyone at NCKU makes me excited.',
+  '對你來說，這可能是第一次嘗試的新口味；對我來說，卻是想家的時候，最想吃到的味道。想到能在成大和大家分享，就覺得很期待。':'For you, it might be a flavor you’re trying for the first time; for me, it’s the taste I think of when I miss home. Just imagining sharing it with everyone at NCKU makes me excited.',
   '阿根廷在世界的另一端，路途很遠，機票也不便宜。但也許不用搭上長途飛機，在校慶逛攤位的時候，就能先嚐到一點阿根廷的日常。':'Argentina is on the other side of the world. It’s a long way, and flights aren’t cheap. But maybe you don’t need a long flight: while you walk around the fair, you can already taste a bit of everyday Argentina.',
   '很開心能在畢業前，讓我遠方的家，和這幾年生活的成大，有這樣一次相遇。':'I’m so happy that before I graduate, my faraway home and NCKU, where I’ve lived these past years, get to meet like this.',
   '12/6，期待把這份味道分享給你。':'On December 6, I can’t wait to share this taste with you.',
@@ -967,31 +1085,31 @@ en: {
   'Asado 是阿根廷的烤肉聚會。大家顧著炭火、聊聊近況，一起慢慢吃。':'Asado is Argentina’s barbecue get-together: tending the coals, catching up, and turning a meal into time together.',
   '這次附的 Chimichurri，就是阿根廷人烤肉時常沾的醬。沾 empanadas 也很搭，可以試試看。':'The chimichurri we include is the classic partner at an Argentine asado. Try dipping your empanada in it, too.',
   '看看這次附的醬 ↑':'See the sauce we include ↑','照片：Maxd2・':'Photo: Maxd2 · ',
-  '怎麼取貨':'How pickup works',
-  '<b>預購</b>　選口味、填稱呼和手機、選取貨時段，約 1 分鐘，不用註冊。':'<b>Pre-order</b>　Choose flavors, enter your name and phone, and pick a time. About 1 minute, no sign-up.',
-  '<b>付款</b>　可以轉帳、LINE Pay，或取貨時付現金。轉帳和 LINE Pay 收到款項才算訂到。':'<b>Pay</b>　Bank transfer or LINE Pay — your order is confirmed once we receive it. You can also pay cash at pickup.',
-  '<b>12/6 來攤位</b>　在你選的時段，報「稱呼＋手機後三碼」，就能拿到熱熱的餡餅。':'<b>Come by on Dec 6</b>　At your time slot, tell us your name and the last 3 digits of your phone, and grab your hot empanadas.',
-  '為什麼要留手機？':'Why do you need my phone number?',
-  '只用來核對取貨和聯絡你，不做其他用途，活動結束後會刪除。':'Only to check your pickup and contact you. We won’t use it for anything else, and we’ll delete it after the event.',
+  '怎麼取餐':'How pickup works',
+  '<b>預購</b>　選口味、填稱呼和電話、選取餐時段，約 1 分鐘，不用註冊。':'<b>Pre-order</b>　Choose flavors, enter your name and phone, and pick a time. About 1 minute, no sign-up.',
+  '<b>付款</b>　12/6 取餐時在攤位付款就好，不用先轉帳。':'<b>Pay</b>　Just pay at the stall when you pick up on Dec 6. No transfer needed.',
+  '<b>12/6 來攤位</b>　在你選的時段，報「稱呼＋電話後三碼」，就能拿到熱熱的餡餅。':'<b>Come by on Dec 6</b>　At your time slot, tell us your name and the last 3 digits of your phone, and grab your hot empanadas.',
+  
+  
   '沒有準時來怎麼辦？':'What if I’m late?',
   '超過你選的時段 30 分鐘還沒來，那份會改成現場販售。':'If you’re more than 30 minutes past your time slot, your order goes on sale at the stall.',
-  '可以退款嗎？':'Can I get a refund?',
-  '有問題請直接用 LINE 跟我們說，會一起想辦法。':'If something comes up, message us on LINE and we’ll work it out together.',
+  
+  
   '資料來源：':'Sources: ','維基百科：恩潘納達':'Wikipedia (Chinese): Empanada','國家足球隊':'National football team',
   '加入 LINE 官方帳號':'Add us on LINE',
-  '客人資料只用來聯絡取貨，活動後會刪除。':'Your details are only used for pickup and will be deleted after the event.',
+  '客人資料只用來聯絡取餐，活動後會刪除。':'Your details are only used for pickup and will be deleted after the event.',
   'Nana\'s Empanadas　成大阿根廷學生　親手做':'Nana\'s Empanadas · handmade by an Argentine student at NCKU',
-  '開始選購':'Start your order','預購單':'Your pre-order',
+  '選口味・看價錢':'Pick flavors · see prices','預購單':'Your pre-order',
   '<span class="req" aria-hidden="true">*</span> 為必填':'<span class="req" aria-hidden="true">*</span> Required',
-  '選方案':'Choose a pack','選口味':'Choose flavors','稱呼和手機':'Name & phone','取貨時段':'Pickup time','付款方式':'Payment','備註':'Note','選填':'Optional',
+  '選方案':'Choose a pack','選口味':'Choose flavors','稱呼和電話':'Name & phone','取餐時段':'Pickup time','付款方式':'Payment','備註':'Note','選填':'Optional',
   '稱呼<span class="req" aria-hidden="true">*</span>':'Name<span class="req" aria-hidden="true">*</span>',
-  '手機號碼<span class="req" aria-hidden="true">*</span>':'Phone number<span class="req" aria-hidden="true">*</span>',
-  '你的 LINE 名稱<span class="req" aria-hidden="true">*</span>':'Your LINE name<span class="req" aria-hidden="true">*</span>',
-  '取貨時報稱呼和手機後三碼就好。':'At pickup, just tell us your name and the last 3 digits of your phone.',
+  '電話<span class="req" aria-hidden="true">*</span>':'Phone number<span class="req" aria-hidden="true">*</span>',
+  
+  '取餐時報稱呼和電話後三碼就好。':'At pickup, just tell us your name and the last 3 digits of your phone.',
   '12/6（日）・每個時段名額有限，額滿就不能選':'Sun, Dec 6 · spots are limited in each slot',
   '快滿了':'Almost full','可預約':'Available',
-  '想換付款方式，再點一次目前選的項目。':'To change it, tap the selected option again.',
-  '我會用它核對你的 LINE Pay 付款。':'I’ll use it to match your LINE Pay payment.',
+  
+  
   '最多 200 字，可以不填。':'Up to 200 characters. You can leave it blank.',
   '送出預購':'Send pre-order','正在送出…':'Sending…',
   /* 程式產生的文字 */
@@ -1000,58 +1118,61 @@ en: {
   '預購尚未開放':'Pre-orders aren’t open yet',
   '預購已額滿，12/6 現場見':'Pre-orders are full — see you at the stall on Dec 6',
   '不附醬':'no sauce','附醬一杯':'+ 1 sauce','小辣':'Mild heat','含蛋奶':'Egg & dairy','含洋蔥':'contains onion',
-  '額滿':'Full','減少':'Fewer','增加':'More',
-  '轉帳':'Bank transfer','取貨付現':'Cash at pickup',
-  '先付款，收到款項才算訂到':'Pay first — confirmed once we receive it',
-  '取貨時付現金':'Pay cash when you pick up',
+  '這個時段滿了':'Full','減少':'Fewer','增加':'More',
+  
+  
+  
   '已選滿 ✓':'All set ✓',
-  '請填稱呼':'Please enter your name','請填手機號碼':'Please enter a 10-digit phone number starting with 09','請選取貨時段':'Please pick a time','請選付款方式':'Please choose a payment method','請填你的 LINE 名稱':'Please enter your LINE name',
+  '請填稱呼':'Please enter your name','請填電話':'Please enter your phone number','請選取餐時段':'Please pick a time',
   '網路不穩，沒有送出去，請再按一次送出。':'Connection problem — it wasn’t sent. Please tap send again.',
   '沒有送出成功，請再試一次。':'It didn’t go through. Please try again.',
   '預購目前沒有開放。':'Pre-orders aren’t open right now.','預購已經截止了。':'Pre-orders have closed.',
   '請填稱呼（20 字以內）。':'Please enter a name (up to 20 characters).',
-  '手機號碼要是 09 開頭的 10 碼。':'The phone number must be 10 digits starting with 09.',
+  '電話格式不對，請照這樣填：0912345678。':'Please check your phone number, e.g. 0912345678.',
   '方案不對。':'That pack isn’t valid.','口味的顆數要剛好等於方案。':'The number of flavors has to match your pack.',
-  '請選取貨時段。':'Please pick a time.','請選付款方式。':'Please choose a payment method.',
-  '取貨付現金只開放 3 顆以內。':'Cash at pickup is only for 3 or fewer.',
-  '選 LINE Pay 要填你的 LINE 名稱，我們才對得到帳。':'With LINE Pay, please enter your LINE name so we can match your payment.',
+  '請選取餐時段。':'Please pick a time.',
+  
+  
   '預購剩下的顆數不夠了。':'There aren’t enough left for this order.',
   '這個時段剩下的顆數不夠了，請選別的時段。':'This time slot doesn’t have enough left. Please pick another one.',
-  '這個時段剛剛額滿了，請選別的時段。':'This time slot just filled up. Please pick another one.',
+  '這個時段滿了，請選別的時段。':'This time slot just filled up. Please pick another one.',
   '系統忙碌，請再試一次。':'The system is busy. Please try again.',
   '台灣':'Taiwan','兩地連結示意':'Connection (illustrative)',
   '把取餐時間加入行事曆':'Add your pickup time to your calendar',
   '建議加入行事曆，取餐前提醒自己。':'Add it so you get a reminder before pickup.',
-  '預購完成！':'You’re all set!','內容':'Order','金額':'Total','取貨時報':'At pickup, say',
+  '預購完成！':'You’re all set!','內容':'Order','金額':'Total','取餐時報':'At pickup, say',
   '＋ 奇米丘里醬 1 杯':'+ 1 cup of chimichurri',
-  '現場有限量隱藏口味':'A limited secret flavor at the stall',
+  
   '只在 12/6 現場賣，數量很少，賣完就沒有。':'Only at the stall on Dec 6, and very few — when they’re gone, they’re gone.',
   '預購單已送出！':'Pre-order sent!',
-  '預購完成・取貨時付現金':'Pre-order complete · pay cash at pickup',
-  '待付款・LINE Pay 付款後完成預購':'Awaiting payment · complete once paid via LINE Pay',
-  '待轉帳・付款後完成預購':'Awaiting transfer · your pre-order is complete once paid',
-  '收到款項後，預購即完成。':'Your pre-order is complete once we receive it.',
+  
+  
+  
+  
   '加入行事曆':'Add to calendar',
-  'NANA 的悄悄話':'A LITTLE SECRET FROM NANA',
-  '我還偷偷準備了一個口味。':'I secretly prepared one more flavor.',
-  '看看這個小驚喜 ＋':'See the little surprise +',
-  '收起 −':'Close −',
-  '有一款沒寫在菜單上的隱藏口味，我會在 12/6 帶到攤位。當天來找我，看看準備了什麼吧。':'There’s a hidden flavor that isn’t on the menu. I’ll bring it to the stall on Dec 6 — come find me and see what it is.',
-  '僅限現場購買，數量有限。':'Only at the stall, limited quantity.',
-  '完成':'Done',
+  
+  
+  
+  
+  
+  
+  '附 Chimichurri 60 ml × 1':'Includes chimichurri 60 ml × 1','Apple 行事曆':'Apple Calendar',
+  '完成':'Done','送醬一杯':'Free sauce','＋ 送 Chimichurri 醬 1 杯':'+ 1 free cup of chimichurri',
   /* 屬性（alt、placeholder、aria-label） */
   '章節':'Sections','南美洲地圖，阿根廷標成藍色':'Map of South America with Argentina in blue','世界地圖，標出台灣和阿根廷，兩地在地球的兩端':'World map showing Taiwan and Argentina on opposite sides of the globe','關閉':'Close','先認識 Empanadas 和阿根廷':'Get to know empanadas and Argentina',
-  '取貨時報這個名字':'The name you’ll give at pickup','09 開頭的 10 碼':'10 digits, starting with 09',
-  '你在 LINE 上顯示的名字':'Your display name on LINE','有想跟 Nana 說的話，或想先問的問題':'Anything you’d like to tell Nana or ask first',
+  '取餐時報這個名字':'The name you’ll give at pickup','例如 0912345678':'e.g. 0912345678',
+  '有想跟 Nana 說的話，或想先問的問題':'Anything you’d like to tell Nana or ask first',
   '經典起司豬肉 empanada 的切面，內餡有豬肉、蛋、紅甜椒和起司':'Cross-section of a classic pork and cheese empanada with pork, egg, red pepper and cheese',
-  '示意圖：一杯用香料和紅椒粉調的 Chimichurri 醬，旁邊是一顆切開的 empanada':'Illustration: a cup of chimichurri made with herbs and paprika, next to an empanada cut open','示意圖':'Illustration',
+  '示意圖：一小碗 Chimichurri 醬，紅褐色的油醬裡有紅椒丁、洋蔥丁和香料':'Illustration: a small bowl of chimichurri, with diced red pepper, onion and herbs in a reddish oil','示意圖':'Illustration',
   '布宜諾斯艾利斯市集上，阿根廷人現場手工包 empanadas':'At a Buenos Aires market, a woman makes empanadas by hand',
   '世界地圖：台灣和阿根廷，點一下用 Google 地圖看阿根廷':'World map showing Taiwan and Argentina. Tap to open Argentina in Google Maps',
   '2022 年阿根廷拿下世界盃後，布宜諾斯艾利斯方尖碑附近擠滿慶祝的球迷':'Fans fill the streets around the Obelisco in Buenos Aires after Argentina won the 2022 World Cup',
   '磚砌烤爐裡燒著柴火，烤架上有兩塊牛肉':'A wood fire in a brick grill with two cuts of beef on the grate'
 },
 es: {
-  'nav.choose':'Sabores','口味':'Sabores','方案':'Combos','阿根廷':'Argentina','取貨':'Retiro',
+  '確認一下你的預購':'Revisá tu pedido','為什麼只收現場付款？':'¿Por qué se paga en el puesto?','因為相信大家，預購不收訂金，取餐時再付就好。攤位只營業 12/6 一天，還請準時取餐，謝謝！':'Confiamos en vos: no cobramos seña, pagás al retirar. El puesto abre solo el 6/12, así que retirá a tiempo. ¡Gracias!','不附醬・<b class="deal">比單買便宜 10 元</b>':'Sin salsa · <b class="deal">NT$10 menos que sueltas</b>','送醬一杯・<b class="deal">比單買便宜 55 元</b>':'Salsa de regalo · <b class="deal">NT$55 menos que sueltas</b>','送醬一杯・<b class="deal">比單買便宜 90 元</b>':'Salsa de regalo · <b class="deal">NT$90 menos que sueltas</b>','保證買得到':'Asegurada','不用排隊':'Sin fila','自己選取餐時間':'Elegís el horario','預購已是最優惠價，不能再用現場優惠。':'La reserva ya tiene el mejor precio: no suma promos del puesto.','比單買便宜':'Ahorrás','再送 Chimichurri 醬一杯':'Y un vasito de chimichurri de regalo','價值 35 元・圖為示意':'Vale NT$35 · imagen ilustrativa','示意圖':'Ilustración','回去修改':'Volver a editar','確認送出':'Confirmar y enviar','取餐':'Retiro','電話':'Celular','送 Chimichurri 醬':'Chimichurri de regalo','12/6 取餐時現場付款':'Pagás en el puesto el 6/12','現場付款':'Pago en el puesto','預購完成・取餐時現場付款':'Reserva completa · pagás en el puesto',
+  '<b>現場付款</b><span>12/6 取餐時，在攤位付錢就好。</span>':'<b>Pago en el puesto</b><span>Pagás cuando retirás el 6/12.</span>',
+  'nav.choose':'Sabores','口味':'Sabores','方案':'Combos','阿根廷':'Argentina','取餐':'Retiro',
   '阿根廷手工烤餡餅':'Empanadas argentinas caseras',
   '來自阿根廷，親手包給你。':'Desde Argentina, hechas a mano para vos.',
   '12/6（日）・成大校慶園遊會':'Dom 6/12 · Feria del aniversario de NCKU',
@@ -1069,29 +1190,29 @@ es: {
   '三個口味都含蛋、奶、小麥，每顆約手掌大。':'Las tres llevan huevo, lácteos y trigo. Cada una es del tamaño de la palma de la mano.',
   'CHIMICHURRI・第二種吃法':'CHIMICHURRI · OTRA FORMA DE COMERLAS',
   '先吃原味，再沾一口阿根廷。':'Primero probala sola, después con un poco de Argentina.',
-  '阿根廷烤肉桌上的經典搭配。我用香料和紅椒粉調製，蒜香、微酸、微辣，沾著餡餅吃，多一層香氣。':'El compañero clásico de la mesa del asado. Lo preparo con hierbas y pimentón: con ajo, un toque ácido y un poco picante. Mojá la empanada y sumale otra capa de sabor.',
+  '阿根廷烤肉桌上的經典搭配。我用新鮮紅椒丁、洋蔥、蒜和香料，泡在橄欖油和醋裡，蒜香、微酸、微辣，沾著餡餅吃，多一層香氣。':'El compañero clásico de la mesa del asado. Lo preparo con morrón fresco, cebolla, ajo y hierbas, en aceite de oliva y vinagre: con ajo, apenas ácido y apenas picante. Mojá la empanada y sumale otra capa de sabor.',
   '3 顆／6 顆預購組合，附醬一杯（60 ml）':'Los combos de 3 y 6 traen un vasito de salsa (60 ml)',
   '預購 3 顆／6 顆，附 Chimichurri 一杯':'Reservando 3 o 6, te llevás un vasito de chimichurri',
   '預購方案':'Combos de preventa',
-  '預購保證買得到、不用排隊，還能自己選取貨時段。':'Reservar te asegura tus empanadas, sin hacer fila y eligiendo tu horario de retiro. Los combos de 3 y 6 traen un vasito de chimichurri.',
+  '預購保證買得到、不用排隊，還能自己選取餐時段。':'Reservar te asegura tus empanadas, sin hacer fila y eligiendo tu horario de retiro. Los combos de 3 y 6 traen un vasito de chimichurri.',
   '<span class="ad"></span>預購還剩 <b id="rem">--</b> 顆・<span id="deadline">讀取中⋯</span><i id="barfill" hidden></i>':'<span class="ad"></span>Quedan <b id="rem">--</b> para reservar · <span id="deadline">Cargando…</span><i id="barfill" hidden></i>',
   '2 顆':'2 unid.','3 顆':'3 unid.','6 顆<span class="best">最划算</span>':'6 unid.<span class="best">Mejor precio</span>',
-  '120–140<small>元</small>':'120–140<small>NTD</small>','200<small>元</small>':'200<small>NTD</small>','390<small>元</small>':'390<small>NTD</small>',
-  '依口味的現場價加總，再減 10 元':'La suma de los precios del puesto, con NT$10 de descuento',
-  '豬肉兩顆 140、一豬一玉米 130、玉米兩顆 120':'2 de cerdo: 140 · 1 de cerdo + 1 humita: 130 · 2 humitas: 120',
-  '口味自由選，附 Chimichurri 醬一杯':'Elegí los sabores que quieras + un vasito de chimichurri',
-  '醬料 60 ml，價值 $35・現場買 3 顆最多 225 元':'Salsa de regalo de 60 ml (vale NT$35) · hasta NT$225 por 3 en el puesto',
-  '醬料 60 ml，價值 $35・現場買 6 顆最多 450 元':'Salsa de regalo de 60 ml (vale NT$35) · hasta NT$450 por 6 en el puesto',
+  '120–140<small>元</small>':'120–140<small>NTD</small>','175–205<small>元</small>':'175–205<small>NTD</small>','335–395<small>元</small>':'335–395<small>NTD</small>',
+  '比單買便宜 10 元':'NT$10 menos que comprarlas sueltas',
+  
+  
+  
+  
   '預購最少 2 顆，不開放單顆。':'No se reservan unidades sueltas.',
-  '<span aria-hidden="true">★</span>當天另有隱藏口味，僅限現場購買，不開放預留。':'<span aria-hidden="true">★</span>Ese día también hay un sabor secreto: solo en el puesto, sin reservas.',
+  
   '把家鄉的味道，帶到你面前':'Te traigo el sabor de mi casa',
   '成大的阿根廷學生只有三個，我是其中一個。畢業前最後一次校慶，想把家鄉的味道帶給你。':'En NCKU somos solo tres estudiantes argentinos, y yo soy una. En la última feria del aniversario antes de recibirme, quiero traerte el sabor de mi casa.',
-  '閱讀 Nana 的故事 ＋':'Leé la carta de Nana +','收起故事 −':'Cerrar la carta −',
+  '繼續讀 ↓':'Seguí leyendo ↓','Hola，我是 Nana，來自阿根廷，現在是成大的大四學生。在成大，來自阿根廷的學生少到一隻手就數得完⋯':'Hola, soy Nana. Soy de Argentina y estoy en el último año en NCKU. En NCKU, los argentinos se cuentan con los dedos de una mano…','收起信 −':'Cerrar la carta −',
   '給成大的你：':'Para vos, en NCKU:',
   'Hola，我是 Nana，來自阿根廷，現在是成大的大四學生。':'Hola, soy Nana. Soy de Argentina y estoy en el último año en NCKU.',
   '在成大，來自阿根廷的學生少到一隻手就數得完，目前只有三個。每次介紹自己來自哪裡，我都覺得，除了地圖上的位置，還有好多家鄉的日常，想分享給大家。':'En NCKU, los argentinos se cuentan con los dedos de una mano: ahora somos solo tres. Cada vez que cuento de dónde soy, siento que hay mucho más que un punto en el mapa: un montón de cosas de todos los días de mi casa que quiero compartir.',
   '趁著畢業前最後一次校慶，我想完成一個一直放在心裡的小夢想：親手做 empanadas，把熟悉的家鄉味道帶到你面前。':'En la última feria del aniversario antes de recibirme, quiero cumplir un sueñito que tenía guardado: hacer empanadas con mis manos y traerte el sabor de mi casa.',
-  '對你來說，這可能是第一次嘗試的新口味；對我來說，卻是想念家鄉時會惦記的滋味。想到能在成大和大家分享，就覺得很期待。':'Para vos, puede ser un sabor que probás por primera vez; para mí, es el sabor que extraño cuando pienso en casa. Imaginarme compartiéndolo en NCKU me entusiasma un montón.',
+  '對你來說，這可能是第一次嘗試的新口味；對我來說，卻是想家的時候，最想吃到的味道。想到能在成大和大家分享，就覺得很期待。':'Para vos, puede ser un sabor que probás por primera vez; para mí, es el sabor que extraño cuando pienso en casa. Imaginarme compartiéndolo en NCKU me entusiasma un montón.',
   '阿根廷在世界的另一端，路途很遠，機票也不便宜。但也許不用搭上長途飛機，在校慶逛攤位的時候，就能先嚐到一點阿根廷的日常。':'Argentina está del otro lado del mundo: es lejos y los pasajes no son baratos. Pero quizás no haga falta un vuelo largo: paseando por la feria, ya podés probar un poquito de la Argentina de todos los días.',
   '很開心能在畢業前，讓我遠方的家，和這幾年生活的成大，有這樣一次相遇。':'Me pone muy feliz que, antes de recibirme, mi casa lejana y NCKU, donde viví estos años, puedan encontrarse así.',
   '12/6，期待把這份味道分享給你。':'El 6 de diciembre, ¡te espero para compartir este sabor!',
@@ -1110,31 +1231,31 @@ es: {
   'Asado 是阿根廷的烤肉聚會。大家顧著炭火、聊聊近況，一起慢慢吃。':'El asado es la juntada argentina por excelencia: cuidar las brasas, ponerse al día y hacer de una comida un rato juntos.',
   '這次附的 Chimichurri，就是阿根廷人烤肉時常沾的醬。沾 empanadas 也很搭，可以試試看。':'El chimichurri que incluimos es el compañero clásico del asado. Probá mojar la empanada también.',
   '看看這次附的醬 ↑':'Mirá la salsa que incluimos ↑','照片：Maxd2・':'Foto: Maxd2 · ',
-  '怎麼取貨':'Cómo retirar',
-  '<b>預購</b>　選口味、填稱呼和手機、選取貨時段，約 1 分鐘，不用註冊。':'<b>Reservá</b>　Elegí los sabores, poné tu nombre y celular y elegí el horario. Un minuto, sin registrarte.',
-  '<b>付款</b>　可以轉帳、LINE Pay，或取貨時付現金。轉帳和 LINE Pay 收到款項才算訂到。':'<b>Pagá</b>　Transferencia o LINE Pay: la reserva queda confirmada cuando recibimos el pago. También podés pagar en efectivo al retirar.',
-  '<b>12/6 來攤位</b>　在你選的時段，報「稱呼＋手機後三碼」，就能拿到熱熱的餡餅。':'<b>Vení al puesto el 6/12</b>　En tu horario, decinos tu nombre y los últimos 3 números de tu celular, y llevate tus empanadas calentitas.',
-  '為什麼要留手機？':'¿Para qué piden mi celular?',
-  '只用來核對取貨和聯絡你，不做其他用途，活動結束後會刪除。':'Solo para verificar el retiro y contactarte. No lo usamos para nada más y lo borramos después del evento.',
+  '怎麼取餐':'Cómo retirar',
+  '<b>預購</b>　選口味、填稱呼和電話、選取餐時段，約 1 分鐘，不用註冊。':'<b>Reservá</b>　Elegí los sabores, poné tu nombre y celular y elegí el horario. Un minuto, sin registrarte.',
+  '<b>付款</b>　12/6 取餐時在攤位付款就好，不用先轉帳。':'<b>Pagá</b>　Pagás en el puesto cuando retirás el 6/12. No hace falta transferir.',
+  '<b>12/6 來攤位</b>　在你選的時段，報「稱呼＋電話後三碼」，就能拿到熱熱的餡餅。':'<b>Vení al puesto el 6/12</b>　En tu horario, decinos tu nombre y los últimos 3 números de tu celular, y llevate tus empanadas calentitas.',
+  
+  
   '沒有準時來怎麼辦？':'¿Y si llego tarde?',
   '超過你選的時段 30 分鐘還沒來，那份會改成現場販售。':'Si pasan más de 30 minutos de tu horario, tu pedido se pone a la venta en el puesto.',
-  '可以退款嗎？':'¿Puedo pedir un reembolso?',
-  '有問題請直接用 LINE 跟我們說，會一起想辦法。':'Si pasa algo, escribinos por LINE y lo resolvemos juntos.',
+  
+  
   '資料來源：':'Fuentes: ','維基百科：恩潘納達':'Wikipedia (chino): Empanada','國家足球隊':'Selección argentina',
   '加入 LINE 官方帳號':'Agreganos en LINE',
-  '客人資料只用來聯絡取貨，活動後會刪除。':'Tus datos solo se usan para el retiro y se borran después del evento.',
+  '客人資料只用來聯絡取餐，活動後會刪除。':'Tus datos solo se usan para el retiro y se borran después del evento.',
   'Nana\'s Empanadas　成大阿根廷學生　親手做':'Nana\'s Empanadas · hechas a mano por una estudiante argentina de NCKU',
-  '開始選購':'Hacé tu pedido','預購單':'Tu reserva',
+  '選口味・看價錢':'Elegí sabores · mirá precios','預購單':'Tu reserva',
   '<span class="req" aria-hidden="true">*</span> 為必填':'<span class="req" aria-hidden="true">*</span> Obligatorio',
-  '選方案':'Elegí el combo','選口味':'Elegí los sabores','稱呼和手機':'Nombre y celular','取貨時段':'Horario de retiro','付款方式':'Forma de pago','備註':'Comentario','選填':'Opcional',
+  '選方案':'Elegí el combo','選口味':'Elegí los sabores','稱呼和電話':'Nombre y celular','取餐時段':'Horario de retiro','付款方式':'Forma de pago','備註':'Comentario','選填':'Opcional',
   '稱呼<span class="req" aria-hidden="true">*</span>':'Nombre<span class="req" aria-hidden="true">*</span>',
-  '手機號碼<span class="req" aria-hidden="true">*</span>':'Celular<span class="req" aria-hidden="true">*</span>',
-  '你的 LINE 名稱<span class="req" aria-hidden="true">*</span>':'Tu nombre en LINE<span class="req" aria-hidden="true">*</span>',
-  '取貨時報稱呼和手機後三碼就好。':'Al retirar, solo decinos tu nombre y los últimos 3 números de tu celular.',
+  '電話<span class="req" aria-hidden="true">*</span>':'Celular<span class="req" aria-hidden="true">*</span>',
+  
+  '取餐時報稱呼和電話後三碼就好。':'Al retirar, solo decinos tu nombre y los últimos 3 números de tu celular.',
   '12/6（日）・每個時段名額有限，額滿就不能選':'Dom 6/12 · cada horario tiene cupos limitados',
   '快滿了':'Quedan pocos','可預約':'Disponible',
-  '想換付款方式，再點一次目前選的項目。':'Para cambiarla, tocá de nuevo la opción elegida.',
-  '我會用它核對你的 LINE Pay 付款。':'Lo uso para saber de quién es cada pago por LINE Pay.',
+  
+  
   '最多 200 字，可以不填。':'Hasta 200 caracteres. Podés dejarlo vacío.',
   '送出預購':'Enviar reserva','正在送出…':'Enviando…',
   '目前讀不到剩餘數量，請重新整理一次。':'No pudimos cargar el cupo. Recargá la página.',
@@ -1142,50 +1263,51 @@ es: {
   '預購尚未開放':'La preventa todavía no abrió',
   '預購已額滿，12/6 現場見':'Se agotó la preventa: ¡nos vemos en el puesto el 6/12!',
   '不附醬':'sin salsa','附醬一杯':'+ 1 salsa','小辣':'Apenas picante','含蛋奶':'Con huevo y lácteos','含洋蔥':'con cebolla',
-  '額滿':'Completo','減少':'Menos','增加':'Más',
-  '轉帳':'Transferencia','取貨付現':'Efectivo al retirar',
-  '先付款，收到款項才算訂到':'Pagás antes; se confirma al recibir el pago',
-  '取貨時付現金':'Pagás en efectivo al retirar',
+  '這個時段滿了':'Completo','減少':'Menos','增加':'Más',
+  
+  
+  
   '已選滿 ✓':'¡Listo! ✓',
-  '請填稱呼':'Poné tu nombre','請填手機號碼':'Poné un celular de 10 números que empiece con 09','請選取貨時段':'Elegí un horario','請選付款方式':'Elegí cómo pagar','請填你的 LINE 名稱':'Poné tu nombre en LINE',
+  '請填稱呼':'Poné tu nombre','請填電話':'Poné tu celular','請選取餐時段':'Elegí un horario',
   '網路不穩，沒有送出去，請再按一次送出。':'Hubo un problema de conexión y no se envió. Tocá enviar de nuevo.',
   '沒有送出成功，請再試一次。':'No se pudo enviar. Probá de nuevo.',
   '預購目前沒有開放。':'La preventa no está abierta ahora.','預購已經截止了。':'La preventa ya cerró.',
   '請填稱呼（20 字以內）。':'Poné un nombre (hasta 20 caracteres).',
-  '手機號碼要是 09 開頭的 10 碼。':'El celular tiene que tener 10 números y empezar con 09.',
+  '電話格式不對，請照這樣填：0912345678。':'Revisá tu celular, por ejemplo: 0912345678.',
   '方案不對。':'Ese combo no es válido.','口味的顆數要剛好等於方案。':'La cantidad de sabores tiene que coincidir con el combo.',
-  '請選取貨時段。':'Elegí un horario.','請選付款方式。':'Elegí cómo pagar.',
-  '取貨付現金只開放 3 顆以內。':'El pago en efectivo es solo hasta 3 unidades.',
-  '選 LINE Pay 要填你的 LINE 名稱，我們才對得到帳。':'Con LINE Pay, poné tu nombre en LINE para que podamos identificar el pago.',
+  '請選取餐時段。':'Elegí un horario.',
+  
+  
   '預購剩下的顆數不夠了。':'No quedan suficientes para este pedido.',
   '這個時段剩下的顆數不夠了，請選別的時段。':'En este horario no quedan suficientes. Elegí otro.',
-  '這個時段剛剛額滿了，請選別的時段。':'Este horario se acaba de completar. Elegí otro.',
+  '這個時段滿了，請選別的時段。':'Este horario se acaba de completar. Elegí otro.',
   '系統忙碌，請再試一次。':'El sistema está ocupado. Probá de nuevo.',
   '台灣':'Taiwán','兩地連結示意':'Conexión (ilustrativa)',
   '把取餐時間加入行事曆':'Agendá tu horario de retiro',
   '建議加入行事曆，取餐前提醒自己。':'Agendalo así te avisa antes de retirar.',
-  '預購完成！':'¡Reserva hecha!','內容':'Pedido','金額':'Total','取貨時報':'Al retirar, decí',
+  '預購完成！':'¡Reserva hecha!','內容':'Pedido','金額':'Total','取餐時報':'Al retirar, decí',
   '＋ 奇米丘里醬 1 杯':'+ 1 vasito de chimichurri',
-  '現場有限量隱藏口味':'Hay un sabor secreto limitado en el puesto',
+  
   '只在 12/6 現場賣，數量很少，賣完就沒有。':'Solo en el puesto el 6/12, y son poquitas: cuando se terminan, se terminan.',
   '預購單已送出！':'¡Reserva enviada!',
-  '預購完成・取貨時付現金':'Reserva completa · pagás en efectivo al retirar',
-  '待付款・LINE Pay 付款後完成預購':'Falta el pago · se completa al pagar por LINE Pay',
-  '待轉帳・付款後完成預購':'Falta la transferencia · la reserva se completa al pagar',
-  '收到款項後，預購即完成。':'Cuando recibimos el pago, la reserva queda completa.',
+  
+  
+  
+  
   '加入行事曆':'Agendar',
-  'NANA 的悄悄話':'UN SECRETITO DE NANA',
-  '我還偷偷準備了一個口味。':'Preparé un sabor más, en secreto.',
-  '看看這個小驚喜 ＋':'Mirá la sorpresita +',
-  '收起 −':'Cerrar −',
-  '有一款沒寫在菜單上的隱藏口味，我會在 12/6 帶到攤位。當天來找我，看看準備了什麼吧。':'Hay un sabor escondido que no está en el menú. Lo llevo al puesto el 6/12: vení a buscarme y descubrilo.',
-  '僅限現場購買，數量有限。':'Solo en el puesto, cantidad limitada.',
-  '完成':'Listo',
+  
+  
+  
+  
+  
+  
+  '附 Chimichurri 60 ml × 1':'Incluye chimichurri 60 ml × 1','Apple 行事曆':'Calendario de Apple',
+  '完成':'Listo','送醬一杯':'Salsa gratis','＋ 送 Chimichurri 醬 1 杯':'+ 1 vasito de chimichurri de regalo',
   '章節':'Secciones','南美洲地圖，阿根廷標成藍色':'Mapa de Sudamérica con Argentina en celeste','世界地圖，標出台灣和阿根廷，兩地在地球的兩端':'Mapa del mundo con Taiwán y Argentina, en extremos opuestos del planeta','關閉':'Cerrar','先認識 Empanadas 和阿根廷':'Conocé las empanadas y Argentina',
-  '取貨時報這個名字':'El nombre que vas a decir al retirar','09 開頭的 10 碼':'10 números, empieza con 09',
-  '你在 LINE 上顯示的名字':'Tu nombre visible en LINE','有想跟 Nana 說的話，或想先問的問題':'Algo que quieras decirle a Nana o preguntarle',
+  '取餐時報這個名字':'El nombre que vas a decir al retirar','例如 0912345678':'ej.: 0912345678',
+  '有想跟 Nana 說的話，或想先問的問題':'Algo que quieras decirle a Nana o preguntarle',
   '經典起司豬肉 empanada 的切面，內餡有豬肉、蛋、紅甜椒和起司':'Corte de una empanada clásica de cerdo y queso, con cerdo, huevo, morrón rojo y queso',
-  '示意圖：一杯用香料和紅椒粉調的 Chimichurri 醬，旁邊是一顆切開的 empanada':'Imagen ilustrativa: un vasito de chimichurri hecho con hierbas y pimentón, junto a una empanada abierta','示意圖':'Imagen ilustrativa',
+  '示意圖：一小碗 Chimichurri 醬，紅褐色的油醬裡有紅椒丁、洋蔥丁和香料':'Imagen ilustrativa: un bowl de chimichurri, con morrón, cebolla y hierbas en aceite rojizo','示意圖':'Imagen ilustrativa',
   '布宜諾斯艾利斯市集上，阿根廷人現場手工包 empanadas':'En una feria de Buenos Aires, una mujer arma empanadas a mano',
   '世界地圖：台灣和阿根廷，點一下用 Google 地圖看阿根廷':'Mapa del mundo con Taiwán y Argentina. Tocá para abrir Argentina en Google Maps',
   '2022 年阿根廷拿下世界盃後，布宜諾斯艾利斯方尖碑附近擠滿慶祝的球迷':'Hinchas llenan las calles alrededor del Obelisco de Buenos Aires tras ganar el Mundial 2022',
@@ -1195,40 +1317,31 @@ es: {
 /* 帶數字的句子 */
 const TF = {
   zh: {
-    pcs:n=>n+' 顆', left:n=>'還可訂 '+n+' 顆', nofit:n=>'放不下 '+n+' 顆', unit:p=>'現場單顆 $'+p,
+    bigsave:x=>x+'<span>元</span>', off:x=>'直接折 '+x+' 元', tagsave:x=>'便宜 $'+x,
+    pcs:n=>n+' 顆', left:n=>'還可訂 '+n+' 顆', nofit:n=>'剩不到 '+n+' 顆', unit:p=>'現場單顆 $'+p,
     picked:(a,b)=>'已選 '+a+'／'+b+' 顆', top:(n,p)=>n+' 顆・'+p, more:n=>'請再選 '+n+' 顆口味',
     short:{cerdo:'經典',picante:'香辣',humita:'玉米'}, day:'12/6（日）', ntd:a=>a+' 元', paid:(a,p)=>a+' 元（'+p+'）',
-    deadline:(dl,open,days)=>(dl.getMonth()+1)+'/'+String(dl.getDate()).padStart(2,'0')+' 23:59 截止，或額滿就關'+(open?'，還有 '+days+' 天。':'。'),
-    say:(n,l)=>'「'+n+'」＋手機後三碼「'+l+'」', thanks:n=>'謝謝你，'+n+'！12/6 期待在攤位見到你。', bank2:a=>'請轉帳 <b>'+a+' 元</b> 至以下帳戶。', bankMemo:l=>'轉帳備註請填手機後三碼「'+l+'」',
-    cash:a=>'取貨時付現金 <b>'+a+' 元</b>。前一天我們會用 LINE 提醒你來拿。',
-    lpHead:a=>'<b>金額 '+a+' 元</b>，請用 LINE Pay 付款：', lp1:'第一步', lp2:'第二步',
-    lpAdd:id=>'用 LINE 加好友，ID：'+id, lpSend:(a,l)=>'用 LINE Pay 傳送 '+a+' 元給我，備註寫「'+l+'」',
-    lpNote:n=>'我會用你填的 LINE 名稱「'+n+'」對帳，收到款項才算訂到。', lpLater:'LINE Pay 的付款方式，我們會用 LINE 傳給你。',
-    bank:a=>'<b>金額 '+a+' 元</b>，請轉帳到下面的帳戶。收到款項後才算訂到。', bankLater:'付款方式（帳號）我們會用 LINE 傳給你。'
+    deadline:(dl,open,days)=>(dl.getMonth()+1)+'/'+String(dl.getDate()).padStart(2,'0')+' 23:59 截止，額滿就提早結束'+(open?'，還有 '+days+' 天。':'。'),
+    say:(n,l)=>'「'+n+'」＋電話後三碼「'+l+'」', thanks:n=>'謝謝你，'+n+'！12/6 期待在攤位見到你。', gift:'<b>送！</b>Chimichurri 醬一杯 60 ml（價值 $35）', giftShort:'送醬一杯（價值 $35）', payLine:(p,st)=>'付款方式：'+p+(st?'・'+st:''), saveShort:x=>'比單買便宜 '+x+' 元', save:x=>'比單買便宜 <b>'+x+' 元</b>', deal:(a,b)=>'單買 <s>'+a+' 元</s>　預購 <b>'+b+' 元</b>', bank2:a=>'請轉帳 <b>'+a+' 元</b> 至以下帳戶。', bankMemo:l=>'轉帳備註請填電話後三碼「'+l+'」',
+    cash:a=>'取餐時在攤位付 <b>'+a+' 元</b>。餐點會依你選的時段準備好，還請準時取餐，謝謝！',
   },
   en: {
+    bigsave:x=>'<span>NT$</span>'+x, off:x=>'NT$'+x+' off', tagsave:x=>'Save $'+x,
     pcs:n=>n+' pcs', left:n=>n+' left', nofit:n=>'can’t fit '+n, unit:p=>'NT$'+p+' each at the stall',
     picked:(a,b)=>a+' / '+b+' chosen', top:(n,p)=>n+' pcs · '+p, more:n=>'Choose '+n+' more',
     short:{cerdo:'Classic',picante:'Spicy',humita:'Corn'}, day:'Sun, Dec 6', ntd:a=>'NT$'+a, paid:(a,p)=>'NT$'+a+' ('+p+')',
     deadline:(dl,open,days)=>'Closes '+['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][dl.getMonth()]+' '+dl.getDate()+', 23:59, or when sold out'+(open?' · '+days+' days left.':'.'),
-    say:(n,l)=>'“'+n+'” + last 3 digits “'+l+'”', thanks:n=>'Thank you, '+n+'! Looking forward to seeing you at the stall on Dec 6.', bank2:a=>'Please transfer <b>NT$'+a+'</b> to the account below.', bankMemo:l=>'In the transfer note, write the last 3 digits of your phone: “'+l+'”',
-    cash:a=>'Pay <b>NT$'+a+'</b> in cash at pickup. We’ll remind you on LINE the day before.',
-    lpHead:a=>'<b>Total NT$'+a+'</b> — please pay with LINE Pay:', lp1:'Step 1', lp2:'Step 2',
-    lpAdd:id=>'Add me on LINE, ID: '+id, lpSend:(a,l)=>'Send NT$'+a+' with LINE Pay and write “'+l+'” in the note',
-    lpNote:n=>'I’ll match your payment with the LINE name “'+n+'”. Your order is confirmed once I receive it.', lpLater:'We’ll send you the LINE Pay details on LINE.',
-    bank:a=>'<b>Total NT$'+a+'</b> — please transfer to the account below. Your order is confirmed once we receive it.', bankLater:'We’ll send you the bank details on LINE.'
+    say:(n,l)=>'“'+n+'” + last 3 digits “'+l+'”', thanks:n=>'Thank you, '+n+'! Looking forward to seeing you at the stall on Dec 6.', gift:'<b>FREE!</b> A 60 ml cup of chimichurri (worth NT$35)', giftShort:'Free sauce (worth NT$35)', payLine:(p,st)=>'Payment: '+p+(st?' · '+st:''), saveShort:x=>'NT$'+x+' less than buying singles', save:x=>'<b>NT$'+x+' less</b> than buying one by one', deal:(a,b)=>'Singles <s>NT$'+a+'</s>　Pre-order <b>NT$'+b+'</b>', bank2:a=>'Please transfer <b>NT$'+a+'</b> to the account below.', bankMemo:l=>'In the transfer note, write the last 3 digits of your phone: “'+l+'”',
+    cash:a=>'Pay <b>NT$'+a+'</b> at the stall when you pick up. Your order will be ready for your time slot — we kindly ask you to pick up on time. Thank you!',
   },
   es: {
+    bigsave:x=>'<span>NT$</span>'+x, off:x=>'NT$'+x+' de descuento', tagsave:x=>'Ahorrás $'+x,
     pcs:n=>n+' unid.', left:n=>'quedan '+n, nofit:n=>'no entran '+n, unit:p=>'NT$'+p+' c/u en el puesto',
     picked:(a,b)=>a+' / '+b+' elegidas', top:(n,p)=>n+' unid. · '+p, more:n=>'Elegí '+n+' más',
     short:{cerdo:'Clásica',picante:'Picante',humita:'Humita'}, day:'Dom 6/12', ntd:a=>'NT$'+a, paid:(a,p)=>'NT$'+a+' ('+p+')',
     deadline:(dl,open,days)=>'Cierra el '+dl.getDate()+'/'+(dl.getMonth()+1)+' a las 23:59 o al agotarse'+(open?' · faltan '+days+' días.':'.'),
-    say:(n,l)=>'“'+n+'” + últimos 3 números “'+l+'”', thanks:n=>'¡Gracias, '+n+'! Te espero en el puesto el 6/12.', bank2:a=>'Transferí <b>NT$'+a+'</b> a esta cuenta.', bankMemo:l=>'En el comentario de la transferencia poné los últimos 3 números de tu celular: “'+l+'”',
-    cash:a=>'Pagás <b>NT$'+a+'</b> en efectivo al retirar. El día anterior te avisamos por LINE.',
-    lpHead:a=>'<b>Total NT$'+a+'</b>: pagá con LINE Pay:', lp1:'Paso 1', lp2:'Paso 2',
-    lpAdd:id=>'Agregame en LINE, ID: '+id, lpSend:(a,l)=>'Mandame NT$'+a+' por LINE Pay y poné “'+l+'” en el mensaje',
-    lpNote:n=>'Voy a identificar tu pago con el nombre de LINE “'+n+'”. La reserva se confirma cuando lo recibo.', lpLater:'Te mandamos los datos de LINE Pay por LINE.',
-    bank:a=>'<b>Total NT$'+a+'</b>: transferí a la cuenta de abajo. La reserva se confirma cuando recibimos el pago.', bankLater:'Te mandamos los datos de la cuenta por LINE.'
+    say:(n,l)=>'“'+n+'” + últimos 3 números “'+l+'”', thanks:n=>'¡Gracias, '+n+'! Te espero en el puesto el 6/12.', gift:'<b>¡DE REGALO!</b> Un vasito de chimichurri de 60 ml (vale NT$35)', giftShort:'Salsa de regalo (vale NT$35)', payLine:(p,st)=>'Pago: '+p+(st?' · '+st:''), saveShort:x=>'NT$'+x+' menos que sueltas', save:x=>'<b>NT$'+x+' menos</b> que comprarlas sueltas', deal:(a,b)=>'Sueltas <s>NT$'+a+'</s>　Reserva <b>NT$'+b+'</b>', bank2:a=>'Transferí <b>NT$'+a+'</b> a esta cuenta.', bankMemo:l=>'En el comentario de la transferencia poné los últimos 3 números de tu celular: “'+l+'”',
+    cash:a=>'Pagás <b>NT$'+a+'</b> en el puesto al retirar. Tu pedido va a estar listo para tu horario: te pedimos que retires a tiempo. ¡Gracias!',
   }
 };
 let LANG = 'zh';
@@ -1260,7 +1373,7 @@ function applyLang(lang, rerender){
   document.querySelectorAll('[data-tza]').forEach(el=>el.setAttribute('aria-label', t(el.dataset.tza)));
   document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.lang===lang)));
   if(rerender){
-    const sb=document.getElementById('storyBtn'); if(sb) sb.textContent = t(sb.getAttribute('aria-expanded')==='true' ? '收起故事 −' : '閱讀 Nana 的故事 ＋');
+    const sb=document.getElementById('storyBtn'); if(sb) sb.querySelector('.stlab').textContent = t(sb.getAttribute('aria-expanded')==='true' ? '收起信 −' : '繼續讀 ↓');
     if(typeof renderHome==='function') renderHome();
     const sh=document.getElementById('sheet');
     if(sh && sh.classList.contains('on') && typeof buildSeg==='function' && document.getElementById('form').style.display!=='none'){ buildSeg(); buildFlavors(); buildSlots(); buildPay(); renderSheet(); }
@@ -1280,18 +1393,23 @@ const FLAVORS = [
   {id:'picante', name:'香辣起司豬肉', price:75, img:'photos/picante.jpg', tag:'小辣'},
   {id:'humita',  name:'奶香玉米起司', price:65, img:'photos/humita.jpg',  tag:'含蛋奶'}
 ];
-const PLAN_PRICE = {3:200, 6:390};
+/* 價錢（預購價錢_定案.md）：現場原價加總，再減固定金額；3、6 顆另送一杯醬（價值 35） */
+const DISCOUNT = {2:10, 3:20, 6:55};
+const SAUCE_VALUE = 35;
+const PRICE_RANGE = {2:'120–140', 3:'175–205', 6:'335–395'};
 
 /* ====== 狀態 ====== */
 let ST = null;
 const S = {plan:3, qty:{cerdo:0,picante:0,humita:0}, slot:'', pay:'', busy:false};
 const $ = id => document.getElementById(id);
 const sum = () => S.qty.cerdo + S.qty.picante + S.qty.humita;
-const plan2 = () => S.qty.cerdo*75 + S.qty.picante*75 + S.qty.humita*65 - 10;
+const stallOf = q => FLAVORS.reduce((a,f)=>a+(q[f.id]||0)*f.price,0);
+const priceNow = () => sum()===S.plan ? stallOf(S.qty) - DISCOUNT[S.plan] : null;
+const saveOf = p => DISCOUNT[p] + (p>=3 ? SAUCE_VALUE : 0);
 
 function demoStatus(){
   const slots = {}; SLOTS.forEach((s,i)=> slots[s] = [3,0,6,3,0,9,12,9,3,0,6,0][i]);
-  return {ok:true, open:true, closedReason:'', deadline:'2026-12-03T23:59:00+08:00', totalCap:150, totalOrdered:63, slotCap:12, slots, payment:'', linePayId:'（示範：你的 LINE ID）', lineUrl:''};
+  return {ok:true, open:true, closedReason:'', deadline:'2026-12-03T23:59:00+08:00', totalCap:150, totalOrdered:63, slotCap:12, slots, lineUrl:''};
 }
 async function loadStatus(){
   if(!APPS_SCRIPT_URL){ if(!ST){ ST = demoStatus(); } $('demo').style.display='block'; renderAll(); return; }
@@ -1309,7 +1427,7 @@ function renderHome(){
   if(!ST){
     $('rem').textContent = '--';
     $('deadline').textContent = t('目前讀不到剩餘數量，請重新整理一次。');
-    cta.disabled = false; cta.innerHTML = t('開始選購'); document.body.classList.remove('pre-closed'); $('hstatus').hidden = true;
+    cta.disabled = false; cta.innerHTML = t('選口味・看價錢'); document.body.classList.remove('pre-closed'); $('hstatus').hidden = true;
     return;
   }
   const rem = remaining();
@@ -1322,7 +1440,7 @@ function renderHome(){
   if(!ST.open) closed = t(ST.closedReason === 'deadline' ? '預購已截止，12/6 現場見' : '預購尚未開放');
   else if(rem <= 0) closed = t('預購已額滿，12/6 現場見');
   document.querySelectorAll('[data-open]').forEach(b=>{ b.disabled = !!closed; });
-  cta.innerHTML = closed ? closed : t('開始選購');
+  cta.innerHTML = closed ? closed : t('選口味・看價錢');
   document.body.classList.toggle('pre-closed', !!closed);
   $('hstatus').hidden = !closed; $('hstatus').textContent = closed;
   if(ST.lineUrl){ const l=$('lineBtn'); l.href=ST.lineUrl; l.style.display='inline-block'; }
@@ -1330,7 +1448,7 @@ function renderHome(){
 
 /* ====== 預購單 ====== */
 function buildSeg(){
-  $('seg').innerHTML = [2,3,6].map(p=>`<button type="button" data-plan="${p}" class="${S.plan===p?'on':''}"><span class="sn">${tf('pcs',p)}</span><small>${p===2?'$120–140':'$'+PLAN_PRICE[p]}</small><em>${t(p===2?'不附醬':'附醬一杯')}</em></button>`).join('');
+  $('seg').innerHTML = [2,3,6].map(p=>`<button type="button" data-plan="${p}" class="${S.plan===p?'on':''}"><i class="sv">${tf('tagsave',saveOf(p))}</i><span class="sn">${tf('pcs',p)}</span><small>$${PRICE_RANGE[p]}</small><em class="${p===2?'':'gift'}">${t(p===2?'不附醬':'送醬一杯')}</em></button>`).join('');
   $('seg').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.plan=+b.dataset.plan; clamp(); buildSeg(); buildFlavors(); buildSlots(); buildPay(); renderSheet(); });
 }
 function clamp(){
@@ -1345,27 +1463,19 @@ function buildSlots(){
   $('slots').innerHTML = SLOTS.map(s=>{
     const left = ST ? Math.max(0, ST.slotCap - (ST.slots[s]||0)) : 0;   // 這個時段還烤得出幾顆
     const full = left < S.plan;
-    const label = full ? t('額滿') : (left<=6 ? t('快滿了') : t('可預約'));
+    const label = full ? t('這個時段滿了') : (left<=6 ? t('快滿了') : t('可預約'));
     return `<button type="button" data-s="${s}" class="${S.slot===s?'on':''} ${!full&&left<=6?'low':''}" ${full?'disabled':''}>${s}<small>${label}</small></button>`;
   }).join('');
   $('slots').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.slot=b.dataset.s; buildSlots(); renderSheet(); });
   if(S.slot && ST && (ST.slotCap-(ST.slots[S.slot]||0))<S.plan) S.slot='';
 }
-function buildPay(){
-  const opts = [['轉帳','先付款，收到款項才算訂到'],['LINE Pay','先付款，收到款項才算訂到'],['取貨付現','取貨時付現金']];
-  $('pay').innerHTML = opts.map(([n,desc])=>{ const other = S.pay && S.pay!==n; return `<button type="button" data-p="${n}" class="${S.pay===n?'on':''}${other?' dim':''}" ${other?'disabled':''} aria-pressed="${S.pay===n}">${t(n)}<small>${t(desc)}</small></button>`; }).join('');
-  $('pay').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.pay = S.pay===b.dataset.p ? '' : b.dataset.p; buildPay(); renderSheet(); });
-  $('payHint').hidden = !S.pay;
-  $('lineBox').style.display = S.pay==='LINE Pay' ? 'block' : 'none';
-}
+function buildPay(){ S.pay='現場付款'; }
 function missing(){
   const m=[];
   if(sum()!==S.plan) m.push('口味（還差 '+(S.plan-sum())+' 顆）');
   if(!$('nm').value.trim()) m.push('稱呼');
-  if(!/^09\d{8}$/.test($('ph').value.replace(/\s|-/g,''))) m.push('手機');
-  if(!S.slot) m.push('取貨時段');
-  if(!S.pay) m.push('付款方式');
-  if(S.pay==='LINE Pay' && !$('ln').value.trim()) m.push('你的 LINE 名稱');
+  if(!/^09\d{8}$/.test($('ph').value.replace(/\s|-/g,''))) m.push('電話');
+  if(!S.slot) m.push('取餐時段');
   return m;
 }
 function renderSheet(){
@@ -1373,16 +1483,23 @@ function renderSheet(){
   const e = $('need'); e.textContent = need>0 ? tf('picked',sum(),S.plan) : t('已選滿 ✓'); e.className = need>0 ? '' : 'ok';
   FLAVORS.forEach(f=>{ const o=$('q_'+f.id); if(o) o.textContent=S.qty[f.id]; });
   document.querySelectorAll('#fls .step button').forEach(b=>{ const d=+b.dataset.d,k=b.dataset.k; b.disabled = d>0 ? sum()>=S.plan : S.qty[k]<=0; });
-  const amount = S.plan===2 ? (sum()===2 ? plan2() : null) : PLAN_PRICE[S.plan];
-  $('sumTop').textContent = tf('top', S.plan, (S.plan===2 ? (amount!==null ? '$'+amount : '$120–140') : '$'+amount));
+  const amount = priceNow();
+  $('sumTop').textContent = tf('top', S.plan, amount!==null ? '$'+amount : '$'+PRICE_RANGE[S.plan]);
   const SHORT=tf('short');
   const fl = FLAVORS.filter(f=>S.qty[f.id]>0).map(f=>SHORT[f.id]+' ×'+S.qty[f.id]).join('・');
   const m = missing();
-  const NEXT={'稱呼':'請填稱呼','手機':'請填手機號碼','取貨時段':'請選取貨時段','付款方式':'請選付款方式','你的 LINE 名稱':'請填你的 LINE 名稱'};
+  const NEXT={'稱呼':'請填稱呼','電話':'請填電話','取餐時段':'請選取餐時段'};
   const first = m.length ? (m[0].startsWith('口味') ? tf('more',S.plan-sum()) : t(NEXT[m[0]]||'請填'+m[0])) : '';
-  $('sumFl').textContent = first ? '' : [fl, S.plan>=3?t('附醬一杯'):''].filter(Boolean).join('・');
+  const sv = saveOf(S.plan);
+  const perkLine=[S.plan>=3?t('送醬一杯'):'', sv>0?tf('saveShort',sv):''].filter(Boolean).join('・');
+  $('sumFl').innerHTML = first ? '' : esc(fl)+(perkLine?'<br><span class="sumperk">'+esc(perkLine)+'</span>':'');
   $('sumMiss').textContent = first;
   $('go').disabled = m.length>0 || S.busy;
+  /* 送醬＋比單買便宜多少：讓人一眼覺得很划算 */
+  const pop = S._lp!==S.plan; S._lp=S.plan;
+  const det = `<p>${tf('off',DISCOUNT[S.plan])}</p>` + (S.plan>=3 ? `<p class="pkgift"><img src="photos/sauce_red.jpg" alt="" width="40" height="40"><span>${t('再送 Chimichurri 醬一杯')}<small>${t('價值 35 元・圖為示意')}</small></span></p>` : '')
+    + (amount!==null ? `<p class="pkline">${tf('deal', stallOf(S.qty)+(S.plan>=3?SAUCE_VALUE:0), amount)}</p>` : '');
+  $('perk').innerHTML = `<div class="pkdeal${pop?' pop':''}"><div class="pkbig"><small>${t('比單買便宜')}</small><b>${tf('bigsave',saveOf(S.plan))}</b></div><div class="pkdet">${det}</div></div>`;
 }
 function openSheet(){
   if(!ST && APPS_SCRIPT_URL){ loadStatus(); }
@@ -1396,13 +1513,13 @@ function showErr(msg){ const e=$('err'); e.textContent=msg; e.className='err on'
 async function submit(){
   if(missing().length) return;
   S.busy=true; $('go').disabled=true; $('go').textContent=t('正在送出…');
-  const order = {plan:S.plan, qty:{...S.qty}, name:$('nm').value.trim(), phone:$('ph').value.replace(/\s|-/g,''), slot:S.slot, pay:S.pay, lineName:$('ln').value.trim(), note:$('nt').value.trim()};
+  const order = {plan:S.plan, qty:{...S.qty}, name:$('nm').value.trim(), phone:$('ph').value.replace(/\s|-/g,''), slot:S.slot, pay:'現場付款', note:$('nt').value.trim()};
   let res;
   try{
     if(!APPS_SCRIPT_URL){
       await new Promise(r=>setTimeout(r,500));
       ST.totalOrdered += S.plan; ST.slots[S.slot] = (ST.slots[S.slot]||0)+S.plan;
-      res = {ok:true, amount: S.plan===2?plan2():PLAN_PRICE[S.plan], sauce: S.plan>=3?1:0, status:ST};
+      res = {ok:true, amount: priceNow(), sauce: S.plan>=3?1:0, status:ST};
     }else{
       const r = await fetch(APPS_SCRIPT_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(order)});
       res = await r.json();
@@ -1414,16 +1531,15 @@ async function submit(){
   showDone(order,res);
 }
 
-/* 把取餐時間加入行事曆：iPhone 用 calendar/ 裡的 .ics 檔，Google 用網址帶入時段（不放稱呼和手機） */
+/* 把取餐時間加入行事曆：iPhone 用 calendar/ 裡的 .ics 檔，Google 用網址帶入時段（不放稱呼和電話） */
 function pickupCal(o){
   const [a,b]=o.slot.split('–'); const n=a.replace(':','');
   const z=t=>{ const [h,m]=t.split(':').map(Number); return '20261206T'+String(h-8).padStart(2,'0')+String(m).padStart(2,'0')+'00Z'; };
   const fl=FLAVORS.filter(f=>o.qty[f.id]>0).map(f=>f.name+' ×'+o.qty[f.id]).join('、');
   const g='https://calendar.google.com/calendar/render?'+new URLSearchParams({action:'TEMPLATE',text:"領取 Nana's Empanadas",dates:z(a)+'/'+z(b),
-    location:'國立成功大學 校慶園遊會（攤位位置公告後更新）',details:'取貨時段：12/6（日）'+o.slot+'\n內容：'+fl+'\n到攤位報「稱呼＋手機後三碼」就能取貨。'}).toString();
+    location:'國立成功大學 校慶園遊會（攤位位置公告後更新）',details:'取餐時段：12/6（日）'+o.slot+'\n內容：'+fl+'\n到攤位報「稱呼＋電話後三碼」就能取餐。'}).toString();
   return `<div class="dcal"><p class="dcalt">${t('加入行事曆')}</p>
-    <div class="pcalbtns"><a href="calendar/pickup-${n}.ics">${t('iPhone／Apple 行事曆')}</a><a href="${g}" target="_blank" rel="noopener">${t('Google 行事曆')}</a></div>
-    <p class="pcalnote">${t('建議加入行事曆，取餐前提醒自己。')}</p></div>`;
+    <div class="pcalbtns"><a href="calendar/pickup-${n}.ics">${t('Apple 行事曆')}</a><a href="${g}" target="_blank" rel="noopener">${t('Google 行事曆')}</a></div></div>`;
 }
 (function(){
   const b=document.getElementById('hcalBtn'), m=document.getElementById('hcalMenu'); if(!b) return;
@@ -1432,43 +1548,41 @@ function pickupCal(o){
 function showDone(o,res){
   const fl = FLAVORS.filter(f=>o.qty[f.id]>0).map(f=>t(f.name)+' ×'+o.qty[f.id]).join('<br>');
   const last3 = o.phone.slice(-3);
-  let pay, state;
-  if(o.pay==='取貨付現'){ state=t('預購完成・取貨時付現金'); pay = `<p>${tf('cash',res.amount)}</p>`; }
-  else if(o.pay==='LINE Pay'){ state=t('待付款・LINE Pay 付款後完成預購'); pay = ST&&ST.linePayId
-    ? `<p>${tf('lpHead',res.amount)}</p><div class="dbox"><dl><dt>${tf('lp1')}</dt><dd>${tf('lpAdd',esc(ST.linePayId))}</dd><dt>${tf('lp2')}</dt><dd>${tf('lpSend',res.amount,last3)}</dd></dl></div><p class="dsmall">${tf('lpNote',esc(o.lineName))}</p>`
-    : `<p>${tf('lpLater')}</p>`; }
-  else { state=t('待轉帳・付款後完成預購'); pay = ST&&ST.payment
-    ? `<p>${tf('bank2',res.amount)}</p><div class="dbox dacct">${esc(ST.payment)}</div><p class="dsmall">${tf('bankMemo',last3)}</p><p>${t('收到款項後，預購即完成。')}</p>`
-    : `<p>${tf('bank2',res.amount)}</p><p class="dsmall">${tf('bankLater')}</p>`; }
+  const state=t('預購完成・取餐時現場付款'), pay=`<p>${tf('cash',res.amount)}</p>`;
   $('done').innerHTML = `
     <div class="dhead"><span class="dcheck" aria-hidden="true">✓</span><h2>${t('預購單已送出！')}</h2><p class="dthanks">${tf('thanks',esc(o.name))}</p><p class="dstate">${state}</p></div>
     <section class="dcard">
-      <p class="dlab">${t('取貨')}</p>
+      <p class="dlab">${t('取餐')}</p>
       <p class="dtime">${tf('day')}<b>${o.slot}</b></p>
-      <p class="dsay">${t('取貨時報')}　${tf('say',esc(o.name),last3)}</p>
-      <dl class="dlist"><div><dt>${t('內容')}</dt><dd>${fl}${res.sauce?'<br>'+t('＋ 奇米丘里醬 1 杯'):''}</dd></div><div><dt>${t('金額')}</dt><dd>${tf('paid',res.amount,esc(t(o.pay)))}</dd></div>${o.note?`<div><dt>${t('備註')}</dt><dd style="white-space:pre-line">${esc(o.note)}</dd></div>`:''}</dl>
+      <p class="dsay">${t('取餐時報')}　${tf('say',esc(o.name),last3)}</p>
+      <dl class="dlist"><div><dt>${t('內容')}</dt><dd>${fl}${res.sauce?'<span class="dsub">'+t('附 Chimichurri 60 ml × 1')+'</span>':''}</dd></div><div><dt>${t('金額')}</dt><dd><b class="damt">NT$${res.amount}</b><span class="dsub">${tf('payLine',t('現場付款'),'')}</span></dd></div>${o.note?`<div><dt>${t('備註')}</dt><dd style="white-space:pre-line">${esc(o.note)}</dd></div>`:''}</dl>
       ${pickupCal(o)}
     </section>
     <section class="dpay"><h3>${t('付款方式')}</h3>${pay}</section>
-    <section class="dnote">
-      <p class="dnk">${t('NANA 的悄悄話')}</p>
-      <h3>${t('我還偷偷準備了一個口味。')}</h3>
-      <button class="dnbtn" id="dnBtn" type="button" aria-expanded="false" aria-controls="dnBody">${t('看看這個小驚喜 ＋')}</button>
-      <div class="dnbody" id="dnBody" hidden><div class="dnin"><p>${t('有一款沒寫在菜單上的隱藏口味，我會在 12/6 帶到攤位。當天來找我，看看準備了什麼吧。')}</p><p class="dsmall">${t('僅限現場購買，數量有限。')}</p></div></div>
-    </section>
     ${ST&&ST.lineUrl?`<p style="text-align:center;margin-top:24px"><a class="linebtn" href="${esc(ST.lineUrl)}" target="_blank" rel="noopener">${t('加入 LINE 官方帳號')}</a></p>`:''}
     <button class="dfin" id="fin">${t('完成')}</button>`;
-  /* 悄悄話：原地柔和展開約 0.6 秒，減少動態效果時直接顯示 */
-  (function(){ const b=$('dnBtn'), body=$('dnBody'); const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches; let tm=0;
-    b.onclick=()=>{ const open=b.getAttribute('aria-expanded')!=='true'; b.setAttribute('aria-expanded',String(open)); b.textContent=t(open?'收起 −':'看看這個小驚喜 ＋'); clearTimeout(tm);
-      if(reduce){ body.hidden=!open; return; }
-      if(open){ body.hidden=false; const h=body.scrollHeight; body.style.height='0px'; body.style.opacity='0'; void body.offsetHeight; body.classList.add('anim'); body.style.height=h+'px'; body.style.opacity='1'; tm=setTimeout(()=>{ body.classList.remove('anim'); body.style.height=''; },650); }
-      else { body.style.height=body.scrollHeight+'px'; void body.offsetHeight; body.classList.add('anim'); body.style.height='0px'; body.style.opacity='0'; tm=setTimeout(()=>{ body.hidden=true; body.classList.remove('anim'); body.style.height=''; body.style.opacity=''; },300); }
-    };
-  })();
   $('form').style.display='none'; $('bar2').style.display='none'; $('done').style.display='block'; $('sheet').scrollTop=0;
-  $('fin').onclick=()=>{ S.qty={cerdo:0,picante:0,humita:0}; S.slot=''; S.pay=''; $('nm').value=''; $('ph').value=''; $('ln').value=''; $('nt').value=''; closeSheet(); loadStatus(); window.scrollTo(0,0); };
+  $('fin').onclick=()=>{ S.qty={cerdo:0,picante:0,humita:0}; S.slot=''; S.pay=''; $('nm').value=''; $('ph').value=''; $('nt').value=''; closeSheet(); loadStatus(); window.scrollTo(0,0); };
 }
+/* 送出前的確認：只放重點、大字，讓客人再看一次買了什麼 */
+function openConfirm(){
+  if(missing().length) return;
+  const amount = priceNow();
+  const fl = FLAVORS.filter(f=>S.qty[f.id]>0).map(f=>`<div class="cfl"><span>${esc(t(f.name))}</span><b>× ${S.qty[f.id]}</b></div>`).join('')
+    + (S.plan>=3 ? `<div class="cfl gift"><span>${t('送 Chimichurri 醬')}</span><b>× 1</b></div>` : '');
+  $('cfmBody').innerHTML = `<h3 id="cfmT">${t('確認一下你的預購')}</h3>
+    <div class="cfmsec">${fl}</div>
+    <div class="cfmrow"><span>${t('取餐')}</span><b>${tf('day')} ${S.slot}</b></div>
+    <div class="cfmrow"><span>${t('稱呼')}</span><b>${esc($('nm').value.trim())}</b></div>
+    <div class="cfmrow"><span>${t('電話')}</span><b>${esc($('ph').value.replace(/\s|-/g,''))}</b></div>
+    <div class="cfmrow tot"><span>${t('金額')}</span><b>NT$${amount}</b></div>
+    <p class="cfmpay">${t('12/6 取餐時現場付款')}・${tf('saveShort',saveOf(S.plan))}</p>
+    <p class="cfmnote">${t('預購已是最優惠價，不能再用現場優惠。')}</p>`;
+  $('cfmBack').textContent = t('回去修改'); $('cfmOk').textContent = t('確認送出');
+  $('cfm').hidden = false;
+}
+$('cfmBack').onclick = ()=>{ $('cfm').hidden = true; };
+$('cfmOk').onclick = ()=>{ $('cfm').hidden = true; submit(); };
 function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function renderAll(){ renderHome(); if($('sheet').classList.contains('on')){ buildSlots(); renderSheet(); } }
 
@@ -1476,7 +1590,7 @@ document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',o
 
 /* 章節導覽：看哪一區就標亮哪一個 */
 (function(){
-  const SEC=[['flavors','三個口味'],['plans','預購方案'],['story','Nana 的小故事'],['wall','認識阿根廷'],['how','怎麼取貨']];
+  const SEC=[['flavors','三個口味'],['plans','預購方案'],['story','Nana 的小故事'],['wall','認識阿根廷'],['how','怎麼取餐']];
   const bar=document.getElementById('nowbar'), links=document.querySelectorAll('#sidenav a, #nowbar a');
   let cur=null, tick=false;
   function update(){
@@ -1501,7 +1615,7 @@ document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',o
   btn.addEventListener('click',()=>{
     const open=btn.getAttribute('aria-expanded')!=='true';
     btn.setAttribute('aria-expanded',String(open));
-    btn.textContent=t(open?'收起故事 −':'閱讀 Nana 的故事 ＋');
+    btn.querySelector('.stlab').textContent=t(open?'收起信 −':'繼續讀 ↓');
     clearTimeout(timer);
     const from=body.getBoundingClientRect().height;
     if(mq.matches){                       // 減少動態效果：直接切換
@@ -1517,7 +1631,7 @@ document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',o
       timer=setTimeout(()=>{ body.style.height=''; paper.classList.add('done'); refreshNav(); },720);
     }else{
       paper.classList.remove('done'); paper.classList.add('closing');
-      body.style.height=from+'px'; void body.offsetHeight; body.style.height='28px';
+      body.style.height=from+'px'; void body.offsetHeight; body.style.height='0px';
       timer=setTimeout(()=>{ full.hidden=true; paper.classList.remove('open','closing'); body.style.height=''; refreshNav(); },210);
     }
   });
@@ -1538,8 +1652,8 @@ document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',o
   }); },{passive:true});
 })();
 document.querySelectorAll('.jump a').forEach(a=>a.addEventListener('click',e=>{ const t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); } }));
-$('close').onclick=closeSheet; $('go').onclick=submit;
-$('nm').addEventListener('input',renderSheet); $('ph').addEventListener('input',renderSheet); $('ln').addEventListener('input',renderSheet);
+$('close').onclick=closeSheet; $('go').onclick=openConfirm;
+$('nm').addEventListener('input',renderSheet); $('ph').addEventListener('input',renderSheet);
 loadStatus(); setInterval(loadStatus,60000);
 </script>
 
