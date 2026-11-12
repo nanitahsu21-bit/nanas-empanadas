@@ -887,6 +887,28 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
 .hrem b{font-family:'Bodoni Moda',serif;font-weight:500;font-size:30px;line-height:1;color:#8E3424}
 .wrap .dmail{margin:8px 0 0;font-size:13px;line-height:1.6;color:var(--muted)}
 .cfmem{font-size:15px!important;word-break:break-all}
+.cfmbox{font-family:var(--sans);padding:26px 22px calc(18px + env(safe-area-inset-bottom));border-radius:14px 14px 0 0}
+.cfmbox h3{margin:0 0 18px;font-size:19px;font-weight:600;letter-spacing:.08em}
+.cfmsec{margin-bottom:6px;padding:2px 0;background:transparent;border:0;border-top:1px solid rgba(91,42,20,.22);border-bottom:1px solid rgba(91,42,20,.22);border-radius:0}
+.cfl{padding:11px 2px}
+.cfl span{font-size:15px;font-weight:500;color:var(--ink)}
+.cfl b{font-family:'Bodoni Moda',serif;font-size:17px;font-weight:500;color:var(--ink)}
+.cfl.gift span,.cfl.gift b{font-family:var(--sans);font-size:13.5px;font-weight:500;color:#9A6B22}
+.cfmrow{padding:11px 2px}
+.cfmrow span{font-size:13px;letter-spacing:.04em}
+.cfmrow b{font-size:15px;font-weight:500}
+.cfmrow.tot{border-bottom:0;padding-top:16px;align-items:center}
+.cfmrow.tot b{font-family:'Bodoni Moda',serif;font-size:28px;font-weight:500;color:#8E3424}
+.cfmpay{margin:4px 0 0;font-size:13px;font-weight:500;color:var(--ink)}
+.cfmbtns{margin-top:18px}
+.cfmbtns button{min-height:50px;border-radius:10px;font-size:15px;font-weight:600;letter-spacing:.06em}
+.wrap .dsecret,.dsecret{margin:22px 0 0;padding:14px 16px;background:#FFFDF7;border-top:2px solid #C99A2E;font-family:var(--sans);font-size:14px;line-height:1.7;color:var(--ink)}
+.dsecret span{display:block;margin-bottom:2px;font-size:11.5px;letter-spacing:.2em;color:#9A6B22}
+.cfmrow.tot b span{margin:0 3px;font-family:var(--sans);font-size:14px;font-weight:400}
+.dsecret{position:relative;text-align:center}
+.wrap .dsecret,.dsecret{padding:18px 18px 16px;border-top:0;border:1px solid rgba(201,154,46,.45);border-radius:4px;background:#FFFBF0;font-size:14.5px;line-height:1.8}
+.dsecret span{margin-bottom:6px;font-family:var(--disp);font-style:italic;font-size:15px;letter-spacing:.06em;color:#9A6B22}
+.dsecret span::before,.dsecret span::after{content:'';display:inline-block;width:18px;height:1px;margin:0 10px;vertical-align:middle;background:rgba(201,154,46,.6)}
 </style>
 </head>
 <body class="pre-closed">
@@ -937,12 +959,10 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
   <section class="zone" id="plans">
     <div class="head"><span>預購方案</span></div>
     <p class="es">Preventa</p>
-    <p class="pk2">預購保證買得到、不用排隊，還能自己選取餐時段。</p>
     <div class="avail3" id="avail" aria-live="polite"><p class="avl">預購剩下</p><p class="avn"><b id="rem">--</b><span>顆</span></p><div class="avbar"><i id="barfill"></i></div><p class="avd" id="deadline"></p></div>
     <div class="plan"><div class="h"><span class="k">2 顆</span><span class="dots"></span><span class="p">120–140<small>元</small></span></div><p class="d">不附醬・<b class="deal">比單買便宜 10 元</b></p></div>
     <div class="plan"><div class="h"><span class="k">3 顆</span><span class="dots"></span><span class="p">175–205<small>元</small></span></div><p class="d">送醬一杯・<b class="deal">比單買便宜 55 元</b></p></div>
     <div class="plan" style="border-bottom:0"><div class="h"><span class="k">6 顆<span class="best">最划算</span></span><span class="dots"></span><span class="p">335–395<small>元</small></span></div><p class="d">送醬一杯・<b class="deal">比單買便宜 90 元</b></p></div>
-    <p class="note">預購最少 2 顆，不開放單顆。</p>
     <p class="note nocombo">預購已是最優惠價，不能再用現場優惠。</p>
   </section>
 
@@ -1019,10 +1039,9 @@ html:not([lang^="zh"]) .sub,html:not([lang^="zh"]) .head span,html:not([lang^="z
       <div class="f"><label for="ph">電話<span class="req" aria-hidden="true">*</span></label><input id="ph" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="例如 0912345678"><small>取餐時報稱呼和電話後三碼就好。</small></div>
       <div class="f"><label for="em">Email<span class="req" aria-hidden="true">*</span></label><input id="em" type="email" inputmode="email" autocomplete="email" maxlength="80" placeholder="例如 name@gmail.com"><small>訂單確認信會寄到這裡，方便你留存。</small></div>
     </div>
-    <div class="blk"><h3><i>04</i><span>取餐時段</span><span class="req" aria-hidden="true">*</span></h3><p class="blksub">12/6（日）・每個時段名額有限，額滿就不能選</p><div class="slots" id="slots"></div></div>
-    <div class="blk"><h3><i>05</i><span>付款方式</span></h3><p class="paycash"><b>現場付款</b><span>12/6 取餐時，在攤位付錢就好。</span></p></div>
-    <div class="blk"><h3><i>06</i><span>備註</span><small class="opt">選填</small></h3>
-      <div class="f"><textarea id="nt" maxlength="200" rows="3" placeholder="有想跟 Nana 說的話，或想先問的問題"></textarea><small>最多 200 字，可以不填。</small></div>
+    <div class="blk"><h3><i>04</i><span>取餐時段</span><span class="req" aria-hidden="true">*</span></h3><p class="blksub">12/6（日）</p><div class="slots" id="slots"></div></div>
+    <div class="blk"><h3><i>05</i><span>備註</span><small class="opt">選填</small></h3>
+      <div class="f"><textarea id="nt" maxlength="200" rows="3" placeholder="有想跟 Nana 說的話，或想先問的問題"></textarea></div>
     </div>
     <div class="err" id="err"></div>
     <div style="height:130px"></div>
@@ -1120,7 +1139,7 @@ en: {
   '電話<span class="req" aria-hidden="true">*</span>':'Phone number<span class="req" aria-hidden="true">*</span>',
   
   '取餐時報稱呼和電話後三碼就好。':'At pickup, just tell us your name and the last 3 digits of your phone.',
-  '12/6（日）・每個時段名額有限，額滿就不能選':'Sun, Dec 6 · spots are limited in each slot',
+  '12/6（日）':'Sun, Dec 6',
   '快滿了':'Almost full','可預約':'Available',
   
   
@@ -1266,7 +1285,7 @@ es: {
   '電話<span class="req" aria-hidden="true">*</span>':'Celular<span class="req" aria-hidden="true">*</span>',
   
   '取餐時報稱呼和電話後三碼就好。':'Al retirar, solo decinos tu nombre y los últimos 3 números de tu celular.',
-  '12/6（日）・每個時段名額有限，額滿就不能選':'Dom 6/12 · cada horario tiene cupos limitados',
+  '12/6（日）':'Dom 6/12',
   '快滿了':'Quedan pocos','可預約':'Disponible',
   
   
@@ -1331,16 +1350,20 @@ es: {
 /* 帶數字的句子 */
 const TF = {
   zh: {
+    secretLab:()=>'偷偷告訴你',
+    secret:()=>'12/6 攤位上，藏著一款菜單上沒有的口味。取餐時，記得多看一眼。',
     mailed:e=>'訂單確認信已寄到 <b>'+e+'</b>，沒收到的話請看一下垃圾郵件。',
-    bigsave:x=>x+'<span>元</span>', off:x=>'直接折 '+x+' 元', tagsave:x=>'便宜 $'+x,
-    pcs:n=>n+' 顆', left:n=>'還可訂 '+n+' 顆', nofit:n=>'剩不到 '+n+' 顆', unit:p=>'現場單顆 $'+p,
+    bigsave:x=>x+'<span>元</span>', off:x=>'直接折 '+x+' 元', tagsave:x=>'便宜 '+x+' 元',
+    pcs:n=>n+' 顆', left:n=>'還可訂 '+n+' 顆', nofit:n=>'剩不到 '+n+' 顆', unit:p=>'現場單顆 '+p+' 元',
     picked:(a,b)=>'已選 '+a+'／'+b+' 顆', top:(n,p)=>n+' 顆・'+p, more:n=>'請再選 '+n+' 顆口味',
     short:{cerdo:'經典',picante:'香辣',humita:'玉米'}, day:'12/6（日）', ntd:a=>a+' 元', paid:(a,p)=>a+' 元（'+p+'）',
     deadline:(dl,open,days)=>(dl.getMonth()+1)+'/'+String(dl.getDate()).padStart(2,'0')+' 23:59 截止，額滿就提早結束'+(open?'，還有 '+days+' 天。':'。'),
-    say:(n,l)=>'「'+n+'」＋電話後三碼「'+l+'」', thanks:n=>'謝謝你，'+n+'！12/6 期待在攤位見到你。', gift:'<b>送！</b>Chimichurri 醬一杯 60 ml（價值 $35）', giftShort:'送醬一杯（價值 $35）', payLine:(p,st)=>'付款方式：'+p+(st?'・'+st:''), saveShort:x=>'比單買便宜 '+x+' 元', save:x=>'比單買便宜 <b>'+x+' 元</b>', deal:(a,b)=>'單買 <s>'+a+' 元</s>　預購 <b>'+b+' 元</b>', bank2:a=>'請轉帳 <b>'+a+' 元</b> 至以下帳戶。', bankMemo:l=>'轉帳備註請填電話後三碼「'+l+'」',
+    say:(n,l)=>'「'+n+'」＋電話後三碼「'+l+'」', thanks:n=>'謝謝你，'+n+'！12/6 期待在攤位見到你。', gift:'<b>送！</b>Chimichurri 醬一杯 60 ml（價值 35 元）', giftShort:'送醬一杯（價值 35 元）', payLine:(p,st)=>'付款方式：'+p+(st?'・'+st:''), saveShort:x=>'比單買便宜 '+x+' 元', save:x=>'比單買便宜 <b>'+x+' 元</b>', deal:(a,b)=>'單買 <s>'+a+' 元</s>　預購 <b>'+b+' 元</b>', bank2:a=>'請轉帳 <b>'+a+' 元</b> 至以下帳戶。', bankMemo:l=>'轉帳備註請填電話後三碼「'+l+'」',
     cash:a=>'取餐時在攤位付 <b>'+a+' 元</b>。餐點會依你選的時段準備好，還請準時取餐，謝謝！',
   },
   en: {
+    secretLab:()=>'Just between us',
+    secret:()=>'A flavor that’s not on the menu will be hiding at the stall on Dec 6. Take a look when you pick up.',
     mailed:e=>'A confirmation email is on its way to <b>'+e+'</b>. If you don’t see it, check your spam folder.',
     bigsave:x=>'<span>NT$</span>'+x, off:x=>'NT$'+x+' off', tagsave:x=>'Save $'+x,
     pcs:n=>n+' pcs', left:n=>n+' left', nofit:n=>'can’t fit '+n, unit:p=>'NT$'+p+' each at the stall',
@@ -1351,6 +1374,8 @@ const TF = {
     cash:a=>'Pay <b>NT$'+a+'</b> at the stall when you pick up. Your order will be ready for your time slot — we kindly ask you to pick up on time. Thank you!',
   },
   es: {
+    secretLab:()=>'Entre nos',
+    secret:()=>'El 6/12, en el puesto se esconde un sabor que no está en el menú. Cuando retires, mirá bien.',
     mailed:e=>'Te mandamos un mail de confirmación a <b>'+e+'</b>. Si no lo ves, revisá la carpeta de spam.',
     bigsave:x=>'<span>NT$</span>'+x, off:x=>'NT$'+x+' de descuento', tagsave:x=>'Ahorrás $'+x,
     pcs:n=>n+' unid.', left:n=>'quedan '+n, nofit:n=>'no entran '+n, unit:p=>'NT$'+p+' c/u en el puesto',
@@ -1465,7 +1490,7 @@ function renderHome(){
 
 /* ====== 預購單 ====== */
 function buildSeg(){
-  $('seg').innerHTML = [2,3,6].map(p=>`<button type="button" data-plan="${p}" class="${S.plan===p?'on':''}"><i class="sv">${tf('tagsave',saveOf(p))}</i><span class="sn">${tf('pcs',p)}</span><small>$${PRICE_RANGE[p]}</small><em class="${p===2?'':'gift'}">${t(p===2?'不附醬':'送醬一杯')}</em></button>`).join('');
+  $('seg').innerHTML = [2,3,6].map(p=>`<button type="button" data-plan="${p}" class="${S.plan===p?'on':''}"><i class="sv">${tf('tagsave',saveOf(p))}</i><span class="sn">${tf('pcs',p)}</span><small>${tf('ntd',PRICE_RANGE[p])}</small><em class="${p===2?'':'gift'}">${t(p===2?'不附醬':'送醬一杯')}</em></button>`).join('');
   $('seg').querySelectorAll('button').forEach(b=>b.onclick=()=>{ S.plan=+b.dataset.plan; clamp(); buildSeg(); buildFlavors(); buildSlots(); buildPay(); renderSheet(); });
 }
 function clamp(){
@@ -1502,7 +1527,7 @@ function renderSheet(){
   FLAVORS.forEach(f=>{ const o=$('q_'+f.id); if(o) o.textContent=S.qty[f.id]; });
   document.querySelectorAll('#fls .step button').forEach(b=>{ const d=+b.dataset.d,k=b.dataset.k; b.disabled = d>0 ? sum()>=S.plan : S.qty[k]<=0; });
   const amount = priceNow();
-  $('sumTop').textContent = tf('top', S.plan, amount!==null ? '$'+amount : '$'+PRICE_RANGE[S.plan]);
+  $('sumTop').textContent = tf('top', S.plan, tf('ntd', amount!==null ? amount : PRICE_RANGE[S.plan]));
   const SHORT=tf('short');
   const fl = FLAVORS.filter(f=>S.qty[f.id]>0).map(f=>SHORT[f.id]+' ×'+S.qty[f.id]).join('・');
   const m = missing();
@@ -1566,17 +1591,16 @@ function pickupCal(o){
 function showDone(o,res){
   const fl = FLAVORS.filter(f=>o.qty[f.id]>0).map(f=>t(f.name)+' ×'+o.qty[f.id]).join('<br>');
   const last3 = o.phone.slice(-3);
-  const state=t('預購完成・取餐時現場付款'), pay=`<p>${tf('cash',res.amount)}</p>`;
   $('done').innerHTML = `
-    <div class="dhead"><span class="dcheck" aria-hidden="true">✓</span><h2>${t('預購單已送出！')}</h2><p class="dthanks">${tf('thanks',esc(o.name))}</p><p class="dstate">${state}</p>${res.mailed===false?'':`<p class="dmail">${tf('mailed',esc(o.email))}</p>`}</div>
+    <div class="dhead"><span class="dcheck" aria-hidden="true">✓</span><h2>${t('預購單已送出！')}</h2><p class="dthanks">${tf('thanks',esc(o.name))}</p>${res.mailed===false?'':`<p class="dmail">${tf('mailed',esc(o.email))}</p>`}</div>
     <section class="dcard">
       <p class="dlab">${t('取餐')}</p>
       <p class="dtime">${tf('day')}<b>${o.slot}</b></p>
       <p class="dsay">${t('取餐時報')}　${tf('say',esc(o.name),last3)}</p>
-      <dl class="dlist"><div><dt>${t('內容')}</dt><dd>${fl}${res.sauce?'<span class="dsub">'+t('附 Chimichurri 60 ml × 1')+'</span>':''}</dd></div><div><dt>${t('金額')}</dt><dd><b class="damt">NT$${res.amount}</b><span class="dsub">${tf('payLine',t('現場付款'),'')}</span></dd></div>${o.note?`<div><dt>${t('備註')}</dt><dd style="white-space:pre-line">${esc(o.note)}</dd></div>`:''}</dl>
+      <dl class="dlist"><div><dt>${t('內容')}</dt><dd>${fl}${res.sauce?'<span class="dsub">'+t('附 Chimichurri 60 ml × 1')+'</span>':''}</dd></div><div><dt>${t('金額')}</dt><dd><b class="damt">${tf('ntd',res.amount)}</b><span class="dsub">${tf('payLine',t('現場付款'),'')}</span></dd></div>${o.note?`<div><dt>${t('備註')}</dt><dd style="white-space:pre-line">${esc(o.note)}</dd></div>`:''}</dl>
       ${pickupCal(o)}
     </section>
-    <section class="dpay"><h3>${t('付款方式')}</h3>${pay}</section>
+    <p class="dsecret"><span>${tf('secretLab')}</span>${tf('secret')}</p>
     ${ST&&ST.lineUrl?`<p style="text-align:center;margin-top:24px"><a class="linebtn" href="${esc(ST.lineUrl)}" target="_blank" rel="noopener">${t('加入 LINE 官方帳號')}</a></p>`:''}
     <button class="dfin" id="fin">${t('完成')}</button>`;
   $('form').style.display='none'; $('bar2').style.display='none'; $('done').style.display='block'; $('sheet').scrollTop=0;
@@ -1594,7 +1618,7 @@ function openConfirm(){
     <div class="cfmrow"><span>${t('稱呼')}</span><b>${esc($('nm').value.trim())}</b></div>
     <div class="cfmrow"><span>Email</span><b class="cfmem">${esc($('em').value.trim())}</b></div>
     <div class="cfmrow"><span>${t('電話')}</span><b>${esc($('ph').value.replace(/\s|-/g,''))}</b></div>
-    <div class="cfmrow tot"><span>${t('金額')}</span><b>NT$${amount}</b></div>
+    <div class="cfmrow tot"><span>${t('金額')}</span><b>${tf('bigsave',amount)}</b></div>
     <p class="cfmpay">${t('12/6 取餐時現場付款')}・${tf('saveShort',saveOf(S.plan))}</p>
     <p class="cfmnote">${t('預購已是最優惠價，不能再用現場優惠。')}</p>`;
   $('cfmBack').textContent = t('回去修改'); $('cfmOk').textContent = t('確認送出');
